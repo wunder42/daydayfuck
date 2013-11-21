@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Knife Tomato Timer</title>
+    	<link href="static/css/bootstrap.css" rel="stylesheet">
+    	<link href="" rel="stylesheet">
+        <style type="text/css">
+        .tomato-box {
+            width:100%;
+            
+        }
+
+        .tomato-box-tools {
+            position: relative;
+        }
+
+        #tomato-time {
+            display: block;
+            height:100px;
+            width:220px;
+            text-align: center;
+            vertical-align: center;
+            background-color: gray;
+        }
+        #tomato-status {
+            width: 107px;
+            background-color: gray;
+        }
+        #tomato-reset {
+            width: 107px;
+            background-color: gray;
+        }
+        </style>
+    </head>
+
+
+
+    <body>
+    	<div class="container">
+            <div class="tomato-box">
+                <div class="tomato-box-tools">
+                    <label id="tomato-time">12:13</label>
+                    <button id="tomato-status">Start</button>
+                    <button id="tomato-reset">Reset</button>
+                </div>
+                <div class="tomato-box-status">
+
+                </div>
+            </div>
+        </div>	
+
+    	<script src="static/js/jquery-1.8.3.min.js"></script>
+    	<script src="static/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                var it;
+                var $tbt = $(".tomato-box-tools");
+                var dh = $(document).height();
+                var tbH = $tbt.height();
+                var tt = $("#tomato-time");
+                var tomatoInterval;
+                $(".tomato-box").css("height", $(document).height()+"px");
+                $tbt.css("top", (dh-tbH)/2 + "px");
+
+                $("#tomato-status").click(function(e) {
+                    // alert($(this).text())
+                    var _text = $(this).text();
+                    if (_text == "Start") {
+                        it=70;
+                        // tomatoTimer();
+                        tomatoInterval = setInterval(tomatoTimer, '1000');
+                        $(this).text("Pause");
+                    } else if (_text == "Pause") {
+                        clearTimeout(tomatoInterval);
+                        $(this).text("Resume");
+                    } else if (_text == "Resume") {
+                        tomatoInterval = setInterval(tomatoTimer, '1000');
+                        $(this).text("Pause");
+                    } else {
+                        alert("ERROR");
+                    }
+                });
+
+                $("#tomato-reset").click(function(e) {
+                    it = 1500;
+                    clearTimeout(tomatoInterval);
+                    $("#tomato-status").text("Start");
+                    $("#tomato-time").text(parse(it));
+                });
+
+                tomatoTimer = function(iob, itime, status) {
+                    $("#tomato-time").text(parse(it));
+                    it = it -1;
+                };
+
+                parse = function(i) {
+                    if (it <= 0) {
+                        clearTimeout(tomatoInterval);
+                        $("#tomato-status").text("Start");
+                        i = 1500;
+                    }
+                    var _t = [];
+                    var _i;
+                    while(i) {
+                        _i = i % 60;
+                        i = Math.floor(i / 60);
+                        if (_i<10) {
+                            _i = '0'+_i;
+                        }
+                        _t.push(_i);
+                    }
+                    return _t.reverse().join(":");
+                }
+            });
+        </script>
+    </body>
+</html>

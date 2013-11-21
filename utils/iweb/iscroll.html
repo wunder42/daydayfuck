@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Scroll Everywhere</title>
+    	<link href="static/css/bootstrap.css" rel="stylesheet">
+    	<link href="" rel="stylesheet">
+        <style type="text/css">
+            .idrag {
+                position: absolute;
+                border: 1px solid gray;
+                top:0;left:0;
+            }
+        </style>
+    </head>
+
+
+    <body>
+    	<span class="idrag">drag,me</span>	
+
+    	<script src="static/js/jquery-1.8.3.min.js"></script>
+    	<script src="static/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(function() {                          
+                $("span").bind("mousedown", function(event){
+                    // alert(event.which.toString())
+                    var $x = event.pageX; var $a = $("span").offset().top;
+                    var $y = event.pageY; var $b = $("span").offset().left;
+                    // alert($a)
+                    if (event.which == 1) {
+                        $('html').mousemove(function(e){
+                            $("span").text(e.pageX.toString()+','+e.pageY.toString());
+                            $("span").css("top", e.pageY - $y + $a);
+                            $("span").css("left",e.pageX - $x + $b);
+                        });
+                    }
+                    
+                }).bind("mouseup", function(e){
+                    // alert('xx');
+                    $("html").unbind("mousemove");
+                });
+                // $("span").text(2);
+                // $('html').mousemove(function(e) {
+                //     // alert('xx');
+                //     $("span").text(e.pageX.toString()+','+e.pageY.toString());
+                // });
+            });
+            
+        </script>
+    </body>
+</html>
