@@ -1,0 +1,89 @@
+{% extends 'base.htm' %}
+
+{% block content %}
+<div class="container" style="border:1px solid #D4D4D4; margin-bottom: 10px;">
+	<ul class="breadcrumb">
+		<li><a href="#">首页</a> <span class="divider">/</span></li>
+		<li><a href="#">Library</a> <span class="divider">/</span></li>
+		<li class="active">Data</li>
+	</ul>
+	<span class="span4" style="margin-left: 0px; margin-right: 0px;">
+	<div class="span3 well">
+		
+		<ul class="nav nav-list bs-docs-sidebar">
+		  <li class="nav-header h4_title"><h4> 课程体系 </h4> </li>
+			{% for cou in course_type %}
+				{% ifequal cou.id course %}
+					<li class="active"><a><i class="icon-chevron-right"></i>{{ cou.title }}</a></li>
+				{% else %}
+					<li><a href="/dyhome/courses/{{cou.id}}/"><i class="icon-chevron-right"></i>{{ cou.title }}</a></li>
+				{% endifequal %}
+			{% endfor %}
+		</ul>
+	</div>
+</span>
+
+	<div class="span8 well" style="margin-left: 0px; margin-right: 0px; padding:20px 2px 5px 2px;">
+		<h4 class="h4_title">{{ now_course.title }}</h4>
+		<br/>
+		<table class="table table-hover table-bordered">
+			<thead>
+              <tr>
+              	<th></th>
+                <th style="text-align: center;">学习效果</th>
+                <th style="text-align: center;">学习内容</th>
+                <th style="text-align: center;">练习要求</th>
+              </tr>
+            </thead>
+            <tbody>
+				<tr class="info">
+				    <td style="text-align: center;">第一天</td>
+				    <td><img src="/static/images/background_old.png" /></td>
+				    <td>通过3DMax了解基本操作，然后作死的练习就行了</td>
+				    <td>熟悉Max软件的基本操作</td>
+			  	</tr>
+				<tr class="info">
+				    <td style="text-align: center;">第二天</td>
+				    <td><img src="/static/images/background_old.png" /></td>
+				    <td>通过3DMax了解基本操作，然后作死的练习就行了</td>
+				    <td>熟悉Max软件的基本操作</td>
+			  	</tr>
+				<tr class="info">
+				    <td style="text-align: center;">第三天</td>
+				    <td><img src="/static/images/background_old.png" /></td>
+				    <td>通过3DMax了解基本操作，然后作死的练习就行了</td>
+				    <td>熟悉Max软件的基本操作</td>
+			  	</tr>
+				<tr class="info">
+				    <td style="text-align: center;">第四天</td>
+				    <td><img src="/static/images/background_old.png" /></td>
+				    <td>通过3DMax了解基本操作，然后作死的练习就行了</td>
+				    <td>熟悉Max软件的基本操作</td>
+			  	</tr>
+				<tr class="info">
+				    <td style="text-align: center;">第五天</td>
+				    <td><img src="/static/images/background_old.png" /></td>
+				    <td>通过3DMax了解基本操作，然后作死的练习就行了</td>
+				    <td>熟悉Max软件的基本操作</td>
+			  	</tr>
+			  	<tr class="info">
+				    <td style="text-align: center;">第五天</td>
+				    <td><img src="/static/images/background_old.png" /></td>
+				    <td>通过3DMax了解基本操作，然后作死的练习就行了</td>
+				    <td>熟悉Max软件的基本操作</td>
+			  	</tr>
+		  	</tbody>
+
+		</table>
+	</div>
+
+	
+	
+	
+
+</div>	
+{% endblock %}
+
+{% block footer %}
+    {% include 'footer.htm' %}
+{% endblock %}

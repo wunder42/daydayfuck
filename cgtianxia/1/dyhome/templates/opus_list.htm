@@ -1,0 +1,52 @@
+{% extends 'base.htm' %}
+
+{% block content %}
+<div class="container" style="margin-bottom: 10px;">
+	<div class="row">
+		<div class="span3 well" style="margin-left: 20px; margin-top:20px;" id="span3">		
+			<ul class="nav nav-list bs-docs-sidebar">
+			  <li class="nav-header"><h4 class="h4_title"> 作品列表 </h4> </li>
+
+			  {% for cou in course_list %}
+				{% ifequal cou.id opus %}
+					<li class="active h4_li"><a href="/dyhome/opus/{{ cou.id }}/1/"><i class="icon-chevron-right pull-right"></i>{{ cou.name }}</a></li>
+				{% else %}
+					<li class="h4_li"><a href="/dyhome/opus/{{ cou.id }}/1/"><i class="icon-chevron-right pull-right"></i>{{ cou.name }}</a></li>
+				{% endifequal %}
+			{% endfor %}
+			</ul>
+		</div>
+
+		<div class="span8" style="padding:20px 0px 5px 0px; margin-right: 5px;" id="span8">
+			{% for opus in coms.object_list %}
+				<span class="span4" style="margin-left: 10px; margin-bottom: 10px;" id="span4"><img class="img-polaroid img-rounded" style="min-height: 40px; height:200px; width:300px;" src="{{opus.image}}" /><span class="">擦擦{{opus.title}}我的</span>&nbsp&nbsp<span class="">{{opus.author}}</span></span>
+			{% endfor %}
+			<div class="span8 pagination" style="text-align: center" id="span8">
+				<ul>
+					<li>
+						{% if coms.has_previous %}
+							<a href="/dyhome/opus/{{course_type}}/{{ coms.previous_page_number }}" title="Prev">Prev</a>
+						{% endif %}
+					</li>
+					{% for p in page_range %}
+						{% ifequal p coms.number %}
+							<li class="active"><a>{{ p }}</a></li>
+						{% else %}
+							<li> <a href="/dyhome/opus/{{course_type}}/{{p}}" title="第{{p}}页"> {{ p }} </a> </li>
+						{% endifequal %}
+					{% endfor %}
+					<li>
+						{% if coms.has_next %}
+							<a href="/dyhome/opus/{{course_type}}/{{ coms.next_page_number }}" title="Next">Next</a>
+						{% endif %}
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>	
+</div>
+{% endblock %}
+
+{% block footer %}
+    {% include 'footer.htm' %}
+{% endblock %}

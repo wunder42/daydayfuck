@@ -1,0 +1,45 @@
+{% extends 'base.htm' %}
+{% load filters %}
+
+{% block content %}
+<div class="container" style="border:1px solid #D4D4D4; margin-bottom: 10px">
+	<span class="label label-success">上一篇:<a href="#" style="color:#778899">呵呵,还没实现</a></span> <span class="label label-success">下一篇:<a href="#" style="color:#778899">呵呵，人间有真爱</a></span>
+	<hr/>
+	<div>
+		<div class="span8" style="margin-left: 0px;">
+			<div class="well" style="padding:0px; margin-left: 20px">
+				<h5 class="span8 text-center" style="margin-left: 0px;"> {{classinfo.title}} </h5>
+				<!-- <p class="span8 text-center" style="width:618px; margin-left:0px;margin-right: 0px; border-bottom: 2px solid #7D9EC0; padding-left:20px;"> <span class="label label-success">{{classinfo.author}}</span>&nbsp&nbsp发布于&nbsp&nbsp{{classinfo.publication_date|date:"y-m-d h:m:s"}}&nbsp&nbsp|&nbsp&nbsp{{classinfo.hot_dot}}次阅读</p> -->
+				<p class="span8" style="margin:10px;">{{classinfo.content|safe}}</p>
+			</div>
+		</div>
+	</div>
+
+	<span class="span4">
+		<div class="span3 well">			
+			<ul class="nav nav-list">
+			  <li class="nav-header h4_title"><h4> 热门开班 </h4> </li>
+			  {% for news in hot_class_list %}
+					{% ifequal forloop.counter 1 %}
+					<li><a href="/dyhome/class/{{news.id}}" title="{{news.title}}"><span class="label label-success">1</span>&nbsp&nbsp{{ news.title|dytruncate:"14" }}</a></li>
+					{% else %}
+					{% ifequal forloop.counter 2 %}
+					<li><a href="/dyhome/class/{{news.id}}" title="{{news.title}}"><span class="label label-success">2</span>&nbsp&nbsp{{ news.title|dytruncate:"14" }}</a></li>
+					{% else %}
+					{% ifequal forloop.counter 3 %}
+					<li><a href="/dyhome/class/{{news.id}}" title="{{news.title}}"><span class="label label-success">3</span>&nbsp&nbsp{{ news.title|dytruncate:"14" }}</a></li>
+					{% else %}
+					<li><a href="/dyhome/class/{{news.id}}" title="{{news.title}}"><span class="label">{{forloop.counter}}</span>&nbsp&nbsp{{ news.title|dytruncate:"14" }}</a></li>
+					{% endifequal %}
+					{% endifequal %}
+					{% endifequal %}
+				{% endfor %}
+			</ul>
+		</div>
+	</span>
+</div>	
+{% endblock %}
+
+{% block footer %}
+    {% include 'footer.htm' %}
+{% endblock %}

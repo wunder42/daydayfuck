@@ -1,0 +1,157 @@
+{% extends 'base.htm' %}
+
+{% block content %}
+<div class="container" style="margin-bottom: 10px;">
+<div class="row">
+	<div class="span3 bs-docs-sidebar" id="span3">
+				<ul class="nav nav-list bs-docs-sidenav well" id="right_float">
+					<li><h4 class="h4_title">报名须知</h4></li>
+		          <li class="h4_li"><a href="#notice"><i class="icon-chevron-right pull-right"></i> 联系我们</a></li>
+		          <li class="h4_li"><a href="#faq"><i class="icon-chevron-right pull-right"></i> 常见问题</a></li>
+		          <li class="h4_li"><a href="#eat"><i class="icon-chevron-right pull-right"></i> 关于食宿</a></li>
+	        	</ul>
+		</div> <!-- end span docs -->
+	<div class="span9" style="margin-left: 0px;" id="span9">
+	<div class="span8 well" id="notice">
+		<div class="span8" id="span8" >
+			<span class="" style="font-size:16px;"> <h4 class="h4_title">联系我们</h4> </span>
+			<br/>
+			<p>
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp点艺数码（客村校区）<br/>
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp咨询热线：020-38621979<br/>
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp紧急电话：13570560543（毛老师）<br/>
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp具体地址：广东省广州市海珠区 客村丽影广场C区B座901室<br/><br/>
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp点艺数码落车站点<br/>
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp地铁站点：客村地铁站 C出口<br/>
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp公交站点：珠影（客村地铁站）站、客村立交站<br/>
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp具体乘车路线，可登陆<a href="http://www.zuoche.com" style="color:red;" target="_blank">坐车网</a>查询<br/>
+				<!-- &nbsp&nbsp&nbsp&nbsp&nbsp<img style="height:180px;width:600px;" src="/static/images/position.png" /><br/> -->
+				
+			</p>
+		</div>
+	</div>
+
+	
+
+
+	<div class="span8 well" id="faq">
+		<div class="accordion" id="accordion2">
+			<div class="span8" id="span8">
+				<span class="" style="font-size:16px;"> <h4 class="h4_title">常见问题</h4> </span><br/>
+			 <div class="accordion-group">
+			   <div class="accordion-heading">
+			     <a class="accordion-toggle label label-light-gray text-gray" data-toggle="collapse" data-parent="#accordion2" href="#collapse1">
+		         	问：我想参加培训，请问有没有报名截止日期?
+			     </a>
+			   </div>
+			   <div id="collapse1" class="accordion-body collapse">
+			     <div class="accordion-inner">
+			         <strong>答：报名没有截至日期，额满为止。可以先拨打咨询电话（020-38621979）咨询一下所报班级的情况。</strong>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="accordion-group">
+			    <div class="accordion-heading">
+			      <a class="accordion-toggle label label-light-gray text-gray" data-toggle="collapse" data-parent="#accordion2" href="#collapse2">
+			        问：学习课程所用的教材是什么？
+			      </a>
+			    </div>
+			    <div id="collapse2" class="accordion-body collapse">
+			      <div class="accordion-inner">
+			       <strong> 答：我们的教材是任课老师写的讲义。如果需要相关教材，可以参考我公司出版的一些相关书籍。
+			      </strong></div>
+			    </div>
+			  </div>
+			  <div class="accordion-group">
+			    <div class="accordion-heading">
+			      <a class="accordion-toggle label label-light-gray text-gray" data-toggle="collapse" data-parent="#accordion2" href="#collapse3">
+			        问：如何缴纳学费？  
+			      </a>
+			    </div>
+			    <div id="collapse3" class="accordion-body collapse">
+			      <div class="accordion-inner">
+			       <strong> 答：1、本地报名学员：直接到学院填写报名表报名交费。  
+					2、外地学员报名：A、邮局普汇　B、银行汇款   
+			      </strong></div>
+			    </div>
+			  </div>
+			  <div class="accordion-group">
+			    <div class="accordion-heading">
+			      <a class="accordion-toggle label label-light-gray text-gray" data-toggle="collapse" data-parent="#accordion2" href="#collapse4">
+			        问：请问提供住宿吗？ 
+			      </a>
+			    </div>
+			    <div id="collapse4" class="accordion-body collapse">
+			      <div class="accordion-inner">
+			       <strong> 答：我们可以给学生提供住宿信息，学生也可自行寻找住宿地。 
+			      </strong></div>
+			    </div>
+			  </div>
+			  <div class="accordion-group">
+			    <div class="accordion-heading">
+			      <a class="accordion-toggle label label-light-gray text-gray" data-toggle="collapse" data-parent="#accordion2" href="#collapse5">
+			        问：非常想来学习，可是上课时间好像有些短，会学到真正的东西吗？
+			      </a>
+			    </div>
+			    <div id="collapse5" class="accordion-body collapse">
+			      <div class="accordion-inner">
+			       <strong> 答：我院的班别和课程设置都是根据实际情况和教师们多年的教学经验开会研究后设置的，基础班可以让没有基础或基础不是很牢的学员扎实掌握专业制作所需的操作技能，而其他各班的学员要求都具有一定的基础，作用是将学员引领到专业制作的道路上，会传授一些市面书本上没有的、专业人员不愿意外传的制作技术和技巧。
+			      </strong></div>
+			    </div>
+			  </div>
+			  <div class="accordion-group">
+			    <div class="accordion-heading">
+			      <a class="accordion-toggle label label-light-gray text-gray" data-toggle="collapse" data-parent="#accordion2" href="#collapse6">
+			        问：报名需不需要进行一些必要的考核？毕竟同你所说的要有一些基础。
+			      </a>
+			    </div>
+			    <div id="collapse6" class="accordion-body collapse">
+			      <div class="accordion-inner">
+			       <strong> 答：报名时我们都会对学员的大致水平作调查的，根据不同的基础提出一些我们的建议。
+			      </strong></div>
+			    </div>
+			  </div>
+			  <div class="accordion-group">
+			    <div class="accordion-heading">
+			      <a class="accordion-toggle label label-light-gray text-gray" data-toggle="collapse" data-parent="#accordion2" href="#collapse7">
+			        问：我没接触过3D，请问能否学会？可以学到什么程度呢？ 
+			      </a>
+			    </div>
+			    <div id="collapse7" class="accordion-body collapse">
+			      <div class="accordion-inner">
+			       <strong> 答：3Ds max应用班是从3Ds max基础开始讲起，非常适合初学者或有自学基础的人士学习，通过一期的学习完全可以掌握max的基本制作流程，为继续学习其他的课程打下坚实的基础。
+			      </strong></div>
+			    </div>
+			  </div>
+			  <div class="accordion-group">
+			    <div class="accordion-heading">
+			      <a class="accordion-toggle label label-light-gray text-gray" data-toggle="collapse" data-parent="#accordion2" href="#collapse8">
+			        问：培训课程对学员有要求吗？比如说学历、英语水平等？ 
+			      </a>
+			    </div>
+			    <div id="collapse8" class="accordion-body collapse">
+			      <div class="accordion-inner">
+			      <strong> 答：对学历没有要求。如果有英语专长是最好的，会对学习有所帮助。另外老师会对出现的英文进行解释，需要同学在最短的时间内记清重要的专用名词。
+			      </strong></div>
+			    </div>
+			  </div> <!-- end accordion-group -->
+			</div>
+		</div>
+	</div> <!-- end span8 -->
+
+	<div class="span8 well" id="eat">
+		<div class="span8" id="span8">
+			<span class="" style="font-size:16px;"> <h4 class="h4_title">关于食宿</h4> </span>
+			<br/>
+			<p>
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp经济餐：8元-20元不等。<br/>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp住宿费用：2人间旅馆，600元每人每月。
+			</p>
+		</div>
+	</div>
+
+
+	</div>
+		
+	</div>
+</div>	
+{% endblock %}

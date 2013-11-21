@@ -1,0 +1,10 @@
+<!-- it's the path dir -->
+<ul class="breadcrumb">
+	{% for path in paths %}
+		{% if forloop.last %}
+			<li class="active">{{path.name}}</li>
+		{% else %}
+			<li><a href="{{path.url}}">{{path.name}}</a> <span class="divider">/</span></li>
+		{% endif %}
+	{% endfor %}
+</ul>

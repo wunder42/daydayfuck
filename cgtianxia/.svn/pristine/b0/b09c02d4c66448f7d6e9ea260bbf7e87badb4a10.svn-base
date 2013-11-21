@@ -1,0 +1,56 @@
+{% extends 'base.htm' %}
+
+{% block content %}
+<div class="container" style="margin-bottom: 10px;">
+
+	<div class="row">
+		<div class="span3 bs-docs-sidebar" id="float_box">
+				<ul class="nav nav-list bs-docs-sidenav well" id="right_float">
+					<li><h4 class="h4_title">关于我们</h4></li>
+		          <li class="h4_li"><a href="#aboutdy"><i class="icon-chevron-right pull-right"></i> 关于点艺</a></li>
+		          <li class="h4_li"><a href="#techevo"><i class="icon-chevron-right pull-right"></i> 教学环境</a></li>
+		          <li class="h4_li"><a href="#recorddy"><i class="icon-chevron-right pull-right"></i> 记录点艺</a></li>
+	        	</ul>
+			</div>
+		<div class="span9" style="margin-left: 0px;" id="span9">
+			<div class="span8 well" style="margin-bottom: 0px;" id="span8">
+				<div class="span8" id="aboutdy">
+					<span style="font-size:16px;"> <h4 class="h4_title"> 走进点艺 </h4> </span>
+					<br/>
+					<p>
+						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<strong>点艺数码</strong>是一家集数字艺术教育与制作于一体的公司。点艺数码由何亮先生2010年创立于广州，组建了建筑、工业、平面、影视四大团队。其中点艺数码的数字艺术教育的人才培养方向有：室内设计，建筑表现和动画，工业产品设计，平面广告设计，影视动画等。<br/>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp多年来，点艺数码积淀了丰富的电脑设计和制作经验，并以优良和强大的师资、一流的硬件配置、显著的培训效果、良好的就业率赢得了设计行业的广泛信赖。点艺数码始终坚持“<strong>专业、高端、艺术、实用</strong>”的理念，致力于打造中国顶尖的CG培训机构。
+					</p>
+				</div>
+			</div>
+
+			<div class="span8 well" style="margin-bottom: 0px; " id="span8">
+				<div class="span8" id="techevo" style="">
+					<span style="font-size:16px;"> <h4 class="h4_title">教学环境</h4> </span>
+					<br/>
+					<p>
+						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp广州<strong>点艺数码</strong>科技有限公司是一家集数字艺术教育与制作于一体的公司。简称点艺教育，由何亮先生2010年创立于广州，组建了建筑、工业、平面三大团队。点艺教育，广州高端设计培训品牌，开设课程：室内设计，建筑表现和动画，工业产品设计，平面广告设计，影视动画等。点艺教育坚持“专业、高端、艺术、实用”理念，致力于打造中国顶尖CG培训机构。
+					</p>
+				</div>
+			</div>
+
+			<div class="span8 well" id="span8">
+				<div class="span8" id="recorddy">
+					<span style="font-size:16px;"> <h4 class="h4_title"> 记录点艺</h4> </span>
+					<br/>
+					<p>
+						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp广州<strong>点艺数码</strong>科技有限公司是一家集数字艺术教育与制作于一体的公司。简称点艺教育，由何亮先生2010年创立于广州，组建了建筑、工业、平面三大团队。点艺教育，广州高端设计培训品牌，开设课程：室内设计，建筑表现和动画，工业产品设计，平面广告设计，影视动画等。点艺教育坚持“专业、高端、艺术、实用”理念，致力于打造中国顶尖CG培训机构。
+					</p>
+				</div>
+			</div>
+		</div>
+			
+		</div>
+	
+	
+
+</div>	
+{% endblock %}
+
+{% block footer %}
+    {% include 'footer.htm' %}
+{% endblock %}

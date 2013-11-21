@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html class="no-js"> <!--<![endif]-->
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>{% block title %}{% endblock %}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<meta name="Keywords" content="室内设计培训,建筑表现培训,3Dmax效果图培训,建筑动画培训,影视动画培训,产品设计培训,电脑设计培训" />
+        <meta name="description" content="广州高端设计培训品牌，开设课程：室内设计，建筑表现和动画，工业产品设计，影视动画等。点艺培训坚持“专业、高端、艺术、实用”理念，打造中国顶尖CG培训机构。">
+        <meta name="author" content=""><!-- Le styles -->
+        <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css">
+        <!-- <link href="/static/css/bootstrap-responsive.css" rel="stylesheet" type="text/css"> -->
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if IE 6]>
+		    <link href="ie6.min.css" rel="stylesheet">
+		<![endif]-->
+
+		<!--[if lte IE 6]>
+		<link rel="stylesheet" type="text/css" href="/static/css/bootstrap-ie6.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/ie.css">
+		<![endif]-->
+
+
+		<style type="text/css">
+			
+			a:link { text-decoration: none;}
+		　　a:active { text-decoration:none}
+		　　a:hover { text-decoration:none;} 
+		　　a:visited { text-decoration: none;}
+
+			
+	        .sidebar-nav {
+	        padding: 9px 0;
+	        }
+	        h3 {
+	        	border: 1px solid #F7F7F7;
+	        	border-radius: 4;
+	        }
+	        h4 {
+	        	padding-left: 4px;
+	        	padding-top: 8px; 
+	        	margin:0px;
+	        	color: #8B7D6B;
+	        	font-size: 15px;
+	        }
+	        .h4_title {
+	        	/*background:url(/static/images/index/nav-bg.png) no-repeat; */
+	        	/*background-color: rgba(4, 168, 231, 100);*/
+	        	/*background-color: #EAEAEA;*/
+	        	border-bottom: 1px solid gray;
+	        	height: 30px;
+	        	border-radius: 4px;
+	        	font-weight: bold;
+	        	/*border-top-right-radius: 12px;*/
+	        }
+	        .span_more {
+	        	font-size: 13px;
+	        }
+	        .span2-5 {
+	        	width: 192px;
+	        }
+	        .span-right {
+	        	float: right; 
+	        	font-size: 12px; 
+	        	/*margin-top: 5px;*/
+	        }
+	        .li_list {
+	        	border-bottom: 2px dotted #EEEEE0; 
+	        	padding: 5px 0px 0px 5px;
+	        }
+	        .h4_li {
+	        	margin:0 0px 0 10px;
+	        	border-bottom: 1px solid #EAEAEA;
+	        }
+	        .img_dot {
+	        	 margin-left: 5px;
+	        	 margin-right: 5px;
+	        }
+	        .label_gray {
+	        	background-color: gray;
+	        }
+	        .label-black {
+	        	background-color: #7EC0EE;
+	        }
+	        .label-light-gray {
+	        	background-color: #C2C2C2;
+	        }
+	        .ss {top: 20px; width:200px;}
+	        .text-gray {
+	        	color: gray;
+	        }
+	        #divide {
+  				border:1px solid #EAEAEA; 
+  				height:36px; 
+  				margin:0px 25px 0px 25px;
+			}
+			.png{  background: url(/angel.png) no-repeat !important;  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/angel.png");  background:none;  width:100px;  height:100px;}
+        </style>
+	</head>
+	<body>
+		
+		{% include 'subnav.htm' %}
+
+		{% block content %}{% endblock %}
+		{% block footer %}{% endblock %}
+		<script src="/static/js/jquery-1.4.2.js" type="text/javascript"></script>
+        <script src="/static/js/bootstrap.js" type="text/javascript"></script>
+        <!-- jQuery 1.7.2 or higher -->
+		<script type="text/javascript" src="/static/js/jquery-1.7.2.min.js"></script>
+		
+        <script type="text/javascript">
+		
+			$(document).ready(function(){
+				var oDiv=document.getElementById("right_float");	
+				var H=0,iE6;
+				var Y=oDiv;
+				while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+				iE6=window.ActiveXObject&&!window.XMLHttpRequest;
+				if(!iE6){
+					if (oDiv){
+					window.onscroll=function()
+					{			
+						var s=document.body.scrollTop||document.documentElement.scrollTop;
+						if(s>120){oDiv.className="nav nav-list bs-docs-sidenav well affix ss";}
+						else{oDiv.className="nav nav-list bs-docs-sidenav well";}	
+					};
+				   }
+				   
+				}    
+			});
+		</script>
+		<!-- [if IE]>
+			<!--[if lte IE 6]>
+				<script type="text/javascript" src="/static/js/bootstrap-ie.js"></script>
+  			<![endif]-->
+  		<![endif]-->
+	</body>
+</html>

@@ -1,0 +1,87 @@
+{% extends 'base.htm' %}
+{% load filters %}
+{% load duoshuo_tags %}
+
+{% block content %}
+<div class="container" style="margin-bottom: 10px;">
+	<span class="label label-gray" style="margin-top: 5px; margin-left: 20px;">上一篇:
+		{% if dy_pre %}
+		<a href="/dyhome/course_display/{{dy_pre.id}}" style="color:black">{{dy_pre.title|dytruncate:"20"}}</a>
+		{% else %}
+		<span style="color:black">没有了</span>
+		{% endif %}
+	</span> 
+	<span class="label label-gray">下一篇:
+		{% if dy_next %}
+			<a href="/dyhome/course_display/{{dy_next.id}}" style="color:black">{{dy_next.title|dytruncate:"20"}}</a>
+		{% else %}
+			<span style="color:black">没有了</span>
+		{% endif %}
+	</span>
+	<hr style="margin-top: 5px;" />
+	<div class="span8" style="margin-left: 0px;">
+		<!-- <div class="span8 well" style="padding:0px;">
+			<h5 class="span6">{{ course_news.title }}</h5> 
+			<img class="span7" style="height:100px" src="{{course_news.image}}" /> <br/>
+			<span class="span7"> {{course_news.content|safe}}
+			</span>
+		</div> -->
+		<div class="span8" style="margin-left: 0px;">
+			<div class="well" style="padding:0px; margin-left: 20px">
+				<h5 class="span8 text-center" style="margin-left: 0px;"> {{dy.title}} </h5>
+				<p class="span8 text-center" style="width:618px; margin-left:0px;margin-right: 0px; border-bottom: 2px solid #7D9EC0; padding-left:20px;"> <span class="label label-gray">{{dy.author}}</span>&nbsp&nbsp发布于&nbsp&nbsp{{dy.publication_date|date:"y-m-d h:m:s"}}<!-- &nbsp&nbsp|&nbsp&nbsp{{dy.hot_dot}}次阅读</p> -->
+				<p class="span8" style="margin:10px;">{{dy.content|safe}}</p>
+			</div>
+		</div>
+		
+	{% duoshuo_comments %}
+		
+
+	</div>
+
+	<span class="span4">
+		<div class="span3 well">
+			
+			<ul class="nav nav-list bs-docs-sidebar">
+			  <li class="nav-header"><h4 class="h4_title">教程分类 </h4> </li>
+				{% for cou in course_list %}
+					{% ifequal cou.id course %}
+						<li class="active h4_li"><a href="/dyhome/course/{{ cou.id }}//"><i class="icon-chevron-right pull-right"></i>{{ cou.name }}</a></li>
+					{% else %}
+						<li class="h4_li"><a href="/dyhome/course/{{ cou.id }}//"><i class="icon-chevron-right pull-right"></i>{{ cou.name }}</a></li>
+					{% endifequal %}
+				{% endfor %}
+			</ul>
+		</div>
+
+		<div class="span3 well">
+			
+			<ul class="nav nav-list">
+			  <li class="nav-header"><h4 class="h4_title"> 热门教程 </h4> </li>
+				{% for cou in hot_list %}
+					{% ifequal forloop.counter 1 %}
+					<li class="h4_li"><a href="/dyhome/course_display/{{cou.id}}" title="{{cou.title}}"><span class="label label-black">1</span>&nbsp&nbsp{{ cou.title|dytruncate:"15" }}</a></li>
+					{% else %}
+					{% ifequal forloop.counter 2 %}
+					<li class="h4_li"><a href="/dyhome/course_display/{{cou.id}}" title="{{cou.title}}"><span class="label label-black">2</span>&nbsp&nbsp{{ cou.title|dytruncate:"15" }}</a></li>
+					{% else %}
+					{% ifequal forloop.counter 3 %}
+					<li class="h4_li"><a href="/dyhome/course_display/{{cou.id}}" title="{{cou.title}}"><span class="label label-black">3</span>&nbsp&nbsp{{ cou.title|dytruncate:"15" }}</a></li>
+					{% else %}
+					<li class="h4_li"><a href="/dyhome/course_display/{{cou.id}}" title="{{cou.title}}"><span class="label">{{forloop.counter}}</span>&nbsp&nbsp{{ cou.title|dytruncate:"15" }}</a></li>
+					{% endifequal %}
+					{% endifequal %}
+					{% endifequal %}
+				{% endfor %}
+			</ul>
+		</div>
+	</span>
+
+</div>	
+{% endblock %}
+
+{% block footer %}
+    {% include 'footer.htm' %}
+	
+{% endblock %}
+

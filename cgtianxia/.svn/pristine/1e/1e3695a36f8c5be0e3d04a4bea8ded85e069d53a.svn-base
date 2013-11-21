@@ -1,0 +1,65 @@
+<div class="container" style="border-radius:4px;margin-bottom: 0px; margin-top:10px;font-size: 14px;"> 
+    <header class="jumbotron subhead" id="overview" style="margin-bottom: 0px;">
+        <div class="span12" id="span12" style="height:90px; width:1000px; margin-right: 10px;">
+            <span class="h4_title pull-right" style="padding: 15px 0px 0 0; margin-top:20px; margin-right: 20px;"><small>咨询热线：020-38621979&nbsp&nbsp|&nbsp&nbspQQ：1902935253</small></span>
+            <a title="每天不一样的惊喜" ><img src="/static/images/logo.png" alt="#" /></a>
+            
+        </div>
+        <div class="span12" id="span12" style="margin:0px; font-size:15px; border-radius: 8px solid red; font-weight: bold">
+            <!-- <a href="/dyhome" title="点艺，为艺术奉献一点"> <h1>点艺数码</h1> </a> -->
+            <div class="subnav" style=" color:red">
+              <ul class="nav nav-pills" style=" margin:0px;">
+                <li style="padding-left: 30px;"><a href="/dyhome">首页</a></li>
+                <li id="divide"> </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">课程设置<b class="caret"></b></a>
+
+                                    <ul class="dropdown-menu nav nav-list" style="*width:180px;">
+                                        {% for course in course_list %}
+                                            <li class="nav-header">{{course.name}}</li>
+                                            {% for course_class in course.course_class %}
+                                                <li><a href="/dyhome/courses/{{course_class.id}}">{{course_class.title}}</a></li>
+                                            {% endfor %}
+                                        {% endfor %}
+                                    </ul>
+
+                                </li>
+                <li id="divide"> </li>
+                <li><a href="/dyhome/team"><bold>教学团队</bold></a></li>
+                <li id="divide"> </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown">作品展示<b class="caret"></b></a>
+                    <ul class="dropdown-menu" style="*width:180px;">
+                        <li>
+                            <a href="/dyhome/opus/0/1/">全部</a>
+                        </li>
+                        <li class="divider"></li>
+                        {% for course in course_list %}
+                            <li> <a href="/dyhome/opus/{{course.id}}/1/">{{course.name}}</a> </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <li id="divide"> </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown">精品教程<b class="caret"></b></a>
+                    <ul class="dropdown-menu" style="*width:180px;">
+                        <li>
+                            <a href="/dyhome/course/0/1/">全部</a>
+                        </li>
+                        <li class="divider"></li>
+                        {% for course in course_list %}
+                            <li> <a href="/dyhome/course/{{course.id}}/1/">{{course.name}}</a> </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <li id="divide"> </li>
+                <li><a href="/dyhome/notice">报名须知</a></li>
+                <li id="divide"> </li>
+                <li><a href="/dyhome/about">关于我们</a></li>
+              </ul>
+            </div>
+        </div>
+        <!-- end span8 -->
+    </header>
+</div>
+<div style="margin-top: 0px; margin-bottom: 20px;height:4px; background-color:gray; width:100%"/> </div>

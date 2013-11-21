@@ -1,0 +1,93 @@
+{% extends 'base.htm' %}
+{% load filters %}
+{% block content %}
+<div class="container" style="margin-bottom: 10px;">
+	<div class="span8" style="margin-left: -20px;">
+		{% for news in coms.object_list %}
+			<div class="span8 well" style="padding:0px;">
+				<h5 class="span7">
+					<a href="/dyhome/course_display/{{news.id}}"> {{news.title}} </a></h5>
+				<p class="span8"> <span class="label label-gray">{{news.author}}</span>&nbsp&nbsp发布于&nbsp&nbsp{{news.publication_date|date:"y-m-d h:m:s"}}<!-- &nbsp&nbsp|&nbsp&nbsp{{news.hot_dot}}次阅读 --></p>
+				<!-- <img class="span7" src="/static/images/win8-jump-desktop.jpg" /> <br/> -->
+				<p class="span7"> <small> {{news.content|removetags:"a p span div strong img br"|dytruncate:"150"}} </small> </p>
+			</div>
+		{% endfor %}
+	<!-- <div class="span8 well" style="padding:0px;">
+		<h4 class="h4_title span6"><a href="/dyhome/course/1"> Windows 8 玩游戏经常无故跳弹出桌面问题的 </a> </h4> 
+		<span class="span1" style=" padding-top:9px; border-bottom:1px dotted red;"> [技术类]</span>
+		<img class="span7" src="/static/images/win8-jump-desktop.jpg" /> <br/>
+		<span class="span7"> 已经用上 Windows 8 的游戏玩家同学们可能很多都遭遇过 游戏玩着玩着突然间就无故弹出到桌面 的问题了吧，根据多位朋友们的反馈，这个真不是少数人的遭遇，而且我自己的台式机和笔记本也都遇到了!
+		</span>
+	</div> -->
+	<div class="span8 pagination text-center">
+		<ul>
+			<li>
+				{% if coms.has_previous %}
+					<a href="/dyhome/course/{{ course }}/{{ coms.previous_page_number }}" title="Prev">Prev</a>
+				{% endif %}
+			</li>
+			{% for p in page_range %}
+				{% ifequal p coms.number %}
+					<li class="active"><a>{{ p }}</a></li>
+				{% else %}
+					<li> <a href="/dyhome/course/{{ course }}/{{p}}" title="第{{p}}页"> {{ p }} </a> </li>
+				{% endifequal %}
+			{% endfor %}
+			<li>
+				{% if coms.has_next %}
+					<a href="/dyhome/course/{{ course }}/{{ coms.next_page_number }}" title="Next">Next</a>
+				{% endif %}
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+	<span class="span4">
+	<div class="span3 well">
+			
+			<ul class="nav nav-list bs-docs-sidebar">
+			  <li class="nav-header"><h4 class="h4_title">教程分类 </h4> </li>
+				{% for cou in course_list %}
+					{% ifequal cou.id course %}
+						<li class="active h4_li"><a href="/dyhome/course/{{ cou.id }}/1/"><i class="icon-chevron-right pull-right"></i>{{ cou.name }}</a></li>
+					{% else %}
+						<li class="h4_li"><a href="/dyhome/course/{{ cou.id }}/1/"><i class="icon-chevron-right pull-right"></i>{{ cou.name }}</a></li>
+					{% endifequal %}
+				{% endfor %}
+			</ul>
+		</div>
+
+		<div class="span3 well">
+			
+			<ul class="nav nav-list">
+			  <li class="nav-header"><h4 class="h4_title"> 热门教程 </h4> </li>
+				{% for cou in hot_list %}
+					{% ifequal forloop.counter 1 %}
+					<li class="h4_li"><a href="/dyhome/course_display/{{cou.id}}" title="{{cou.title}}"><span class="label label-black">1</span>&nbsp&nbsp{{ cou.title|dytruncate:"15" }}</a></li>
+					{% else %}
+					{% ifequal forloop.counter 2 %}
+					<li class="h4_li"><a href="/dyhome/course_display/{{cou.id}}" title="{{cou.title}}"><span class="label label-black">2</span>&nbsp&nbsp{{ cou.title|dytruncate:"15" }}</a></li>
+					{% else %}
+					{% ifequal forloop.counter 3 %}
+					<li class="h4_li"><a href="/dyhome/course_display/{{cou.id}}" title="{{cou.title}}"><span class="label label-black">3</span>&nbsp&nbsp{{ cou.title|dytruncate:"15" }}</a></li>
+					{% else %}
+					<li class="h4_li"><a href="/dyhome/course_display/{{cou.id}}" title="{{cou.title}}"><span class="label">{{forloop.counter}}</span>&nbsp&nbsp{{ cou.title|dytruncate:"15" }}</a></li>
+					{% endifequal %}
+					{% endifequal %}
+					{% endifequal %}
+				{% endfor %}
+			</ul>
+		</div>
+	</span>
+
+	
+	
+	
+
+</div>	
+{% endblock %}
+
+{% block footer %}
+    {% include 'footer.htm' %}
+{% endblock %}

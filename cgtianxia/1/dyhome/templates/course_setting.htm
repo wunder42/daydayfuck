@@ -1,0 +1,121 @@
+{% extends 'base.htm' %}
+
+{% block content %}
+
+<div class="container" style="margin-bottom: 10px;">
+	<div class="span4" id="span4" style="margin-left: -20px; margin-right: 0px;">
+	<div class="span3 well" id="span3">
+<!-- 		
+		<ul class="nav nav-list bs-docs-sidebar">
+		  <li class="nav-header h4_title"><h4> 课程体系 </h4> </li>
+			{% for cou in course_list %}
+				<li> {{cou.name}} </li>
+				{% for c in cou.course_class %}
+					<li><a href="/dyhome/courses/{{c.id}}"> {{c.title}} </li>
+				{% endfor %}
+				<br/>
+			{% endfor %}
+		</ul> -->
+		<ul class="nav nav-list" >
+			{% for cou in course_list %}
+				<li class="nav-header" style="padding:0 0 0 0;"> <h4 class="h4_title"> {{cou.name}} </h4> </li>
+				<!-- <li class="divider"> </li> -->
+				{% for c in cou.course_class %}
+					<li><a href="/dyhome/courses/{{c.id}}"> <i class="icon-chevron-right pull-right"></i> {{c.title}} </a> </li>
+				{% endfor %}
+			{% endfor %}
+		</ul>
+
+	</div>
+	<div class="span3 well" style="" id="span3">
+
+		<form action="/dyhome/signup/" method="post">
+			{% csrf_token %}
+		  <fieldset>
+		    <legend style="padding-bottom: 10px;"><h4 class="h4_title">我要报名</h4></legend>
+		    <!-- {{ form.as_table }} -->
+		    <label for="id_name">姓名：<input class="span3" type="text" required placeholder="请输入姓名" name="name" id="id_name"></label>
+		    <label for="id_college">学校：<input class="span3" type="text" required placeholder="请输入学校" name="college" id="id_college"></label>
+		    <label for="id_phone">电话：<input class="span3" type="text" required placeholder="请输入电话" name="phone" id="id_phone"></label>
+		    <label for="id_qq">QQ：<input class="span3" type="text" required placeholder="请输入QQ" name="qq" id="id_qq"></label>
+		    <label for="id_mail">邮箱：<input class="span3" type="email" required placeholder="请输入邮箱" name="mail" id="id_mail"></label>
+		    <label for="id_course">课程选择：
+			    <select class="span3" name="course" id="id_course">
+				  {% for cou in course_list %}
+					{% for c in cou.course_class %}
+						<option value="{{forloop.counter}}"> {{c.title}} </option>
+					{% endfor %}
+				  {% endfor %}
+				</select>
+			</label>
+		    <button type="submit" class="btn pull-right">提交</button>
+		  </fieldset>
+		</form>
+	</div>
+</div>
+
+	<div class="span8 well" style="margin-left: 0px; margin-right: 0px; padding:20px 2px 5px 2px;" id="span8">
+		<!-- {{course_setting.content|safe}} -->
+		<!-- <div class="span4" style="margin-left:5px;" id="span4"> <img src="/static/images/slider_a.jpg" style="width:300px; height:300px;" /></div>
+		<div class="span4" style="margin-left:5px;" id="span4"> <img src="/static/images/slider_a.jpg" style="width:300px; height:300px;" /></div> -->
+		<div class="span8" style="margin:5px 0 0 0;" id="span8">
+			<img src="/static/images/course_setting.jpg"/><br/>
+		<h4 class="h4_title text-center">室内A班{{ now_course.title }}</h4>
+		<br/>
+		<table class="table table-hover table-bordered">
+			<thead>
+              <tr>
+              	<th></th>
+                <th style="text-align: center;">学习效果</th>
+                <th style="text-align: center;">学习内容</th>
+                <th style="text-align: center;">练习要求</th>
+              </tr>
+            </thead>
+            <tbody>
+				<tr class="">
+				    <td style="text-align: center;">第一天</td>
+				    <td><img src="/static/images/background_old.png" /></td>
+				    <td>通过3DMax了解基本操作，然后作死的练习就行了</td>
+				    <td>熟悉Max软件的基本操作</td>
+			  	</tr>
+				<tr class="">
+				    <td style="text-align: center;">第二天</td>
+				    <td><img src="/static/images/background_old.png" /></td>
+				    <td>通过3DMax了解基本操作，然后作死的练习就行了</td>
+				    <td>熟悉Max软件的基本操作</td>
+			  	</tr>
+				<tr class="">
+				    <td style="text-align: center;">第三天</td>
+				    <td><img src="/static/images/background_old.png" /></td>
+				    <td>通过3DMax了解基本操作，然后作死的练习就行了</td>
+				    <td>熟悉Max软件的基本操作</td>
+			  	</tr>
+				<tr class="">
+				    <td style="text-align: center;">第四天</td>
+				    <td><img src="/static/images/background_old.png" /></td>
+				    <td>通过3DMax了解基本操作，然后作死的练习就行了</td>
+				    <td>熟悉Max软件的基本操作</td>
+			  	</tr>
+				<tr class="">
+				    <td style="text-align: center;">第五天</td>
+				    <td><img src="/static/images/background_old.png" /></td>
+				    <td>通过3DMax了解基本操作，然后作死的练习就行了</td>
+				    <td>熟悉Max软件的基本操作</td>
+			  	</tr>
+			  	<tr class="">
+				    <td style="text-align: center;">第五天</td>
+				    <td><img src="/static/images/background_old.png" /></td>
+				    <td>通过3DMax了解基本操作，然后作死的练习就行了</td>
+				    <td>熟悉Max软件的基本操作</td>
+			  	</tr>
+		  	</tbody>
+
+		</table>
+	</div>
+	</div>
+</div>	
+{% endblock %}
+
+{% block footer %}
+    {% include 'footer.htm' %}
+{% endblock %}

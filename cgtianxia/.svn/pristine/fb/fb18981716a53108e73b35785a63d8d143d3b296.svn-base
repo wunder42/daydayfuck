@@ -1,0 +1,40 @@
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </a>
+  <a class="brand pull-right" href="#">为艺术奉献一点</a>
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li class="active">
+                        <a href="#">点艺</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">课程<b class="caret"></b></a>
+                        <ul class="dropdown-menu" id="menu3">
+                            <li>
+                                <a href="#">平面</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">被间隔的链接</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">博客</a>
+                    </li>
+                    <li>
+                        <a href="#">论坛</a>
+                    </li>
+                </ul>
+                <!-- <p class="navbar-text pull-right">
+                    科技
+                </p> -->
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</div><!--/.fluid-container-->

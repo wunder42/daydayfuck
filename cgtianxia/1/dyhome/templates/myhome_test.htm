@@ -1,0 +1,190 @@
+{% extends 'base.htm' %}
+
+{% block content %}
+<div class="container">
+            <!-- Main hero unit for a primary marketing message or call to action -->
+            <div>
+                {{ tiny.body|safe }}
+            </div>
+            <div>
+                <div id="myCarousel" class="carousel">
+                    <!-- Carousel items -->
+                    <div class="item active">
+                                <img src="/static/images/slider_a.jpg" alt="#" />
+                                <div class="carousel-caption">
+                                    <h4>123</h4>
+                                    <p>ABC</p>
+                                </div>
+                    </div>
+                    <div class="carousel-inner">
+                        {% for ad_pic in ad_pic_list %}
+                            {% if forloop.first %}
+                            <div class="item active">
+                                <img src="{{ ad_pic.image_url }}" alt="#" />
+                                <div class="carousel-caption">
+                                    <h4>{{ ad_pic.title }}</h4>
+                                    <p>{{ ad_pic.content }}</p>
+                                </div>
+                            </div>
+                            {% else %}
+                            <div class="item">
+                                <img src="{{ ad_pic.image_url }}" alt="#" />
+                                <div class="carousel-caption">
+                                    <h4>{{ ad_pic.title }}</h4>
+                                    <p>{{ ad_pic.content }}</p>
+                                </div>
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a> <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
+                </div>
+            </div>
+        </div><!-- Carousel nav -->
+        <div class="container">
+            <div class="row">
+                <div class="span4" >
+                    <h4 class="h4_title">点艺新闻<span class="span_more">更多</span></h4>
+      <ul class="unstyled">
+        <li class="li_list"> <img src="/static/images/index/dot.png" class="img_dot"> <a href="/dyhome/news/1">我的世界，我的歌声里</a> <span class="span_right">03/19</span> </li>
+        <li class="li_list"> <img src="/static/images/index/dot.png" class="img_dot"> <a href="#">我的世界，我的歌声里</a> <span class="span_right">03/19</span> </li>
+        <li class="li_list"> <img src="/static/images/index/dot.png" class="img_dot"> <a href="#">我的世界，我的歌声里</a> <span class="span_right">03/19</span> </li>
+        <li class="li_list"> <img src="/static/images/index/dot.png" class="img_dot"> <a href="#">我的世界，我的歌声里</a> <span class="span_right">03/19</span> </li>
+        <li class="li_list"> <img src="/static/images/index/dot.png" class="img_dot"> <a href="#">我的世界，我的歌声里</a> <span class="span_right">03/19</span> </li>
+        <li class="li_list"> <img src="/static/images/index/dot.png" class="img_dot"> <a href="#">我的世界，我的歌声里</a> <span class="span_right">03/19</span> </li>
+        
+            {% for news in news_list %}
+                <li> <a href="info/{{ news.tid}}">{{ news.title }}</a></li>
+            {% endfor %}
+      </ul>
+                </div>
+                <div class="span4">
+                      <h4 class="h4_title">最新教程<span class="span_more">更多</span></h4>
+      <ul class="unstyled">
+        <li class="li_list"> <img src="/static/images/index/dot.png" class="img_dot"> <a href="#">最新，最快，最强的教程，让你似懂非懂</a> <span class="span_right">[3D建模]</span> </li>
+        <li class="li_list"> <img src="/static/images/index/dot.png" class="img_dot"> <a href="#">最新，最快，最强的教程，让你似懂非懂</a> <span class="span_right">[3D建模]</span> </li>
+        <li class="li_list"> <img src="/static/images/index/dot.png" class="img_dot"> <a href="#">最新，最快，最强的教程，让你似懂非懂</a> <span class="span_right">[3D建模]</span> </li>
+        <li class="li_list"> <img src="/static/images/index/dot.png" class="img_dot"> <a href="#">最新，最快，最强的教程，让你似懂非懂</a> <span class="span_right">[3D建模]</span> </li>
+        <li class="li_list"> <img src="/static/images/index/dot.png" class="img_dot"> <a href="#">最新，最快，最强的教程，让你似懂非懂</a> <span class="span_right">[3D建模]</span> </li>
+        <li class="li_list"> <img src="/static/images/index/dot.png" class="img_dot"> <a href="#">最新，最快，最强的教程，让你似懂非懂</a> <span class="span_right">[3D建模]</span> </li>
+            {% for course in course_list %}
+                <li> <a href="course/{{ course.tid}}">{{ course.title }}</a></li>
+            {% endfor %}
+      </ul>
+                   </div>
+                <div class="span3 offset1">
+                    <h4 class="h4_title">开班信息</h4>
+                    <ul class="unstyled">
+        <li class="li_list"> <img src="/static/images/index/hongdian.png" class="img_dot"> <a href="#">平面设计(白天)</a> <span style="float: right; font-size:10px;" >04/01</span> </li>
+        <li class="li_list"> <img src="/static/images/index/hongdian.png" class="img_dot"> <a href="#">平面设计(白天)</a> <span style="float: right; font-size:10px;" >04/01</span> </li>
+        <li class="li_list"> <img src="/static/images/index/hongdian.png" class="img_dot"> <a href="#">平面设计(白天)</a> <span style="float: right; font-size:10px;" >04/01</span> </li>
+        <li class="li_list"> <img src="/static/images/index/hongdian.png" class="img_dot"> <a href="#">平面设计(白天)</a> <span style="float: right; font-size:10px;" >04/01</span> </li>
+        <li class="li_list"> <img src="/static/images/index/hongdian.png" class="img_dot"> <a href="#">平面设计(白天)</a> <span style="float: right; font-size:10px;" >04/01</span> </li>
+        <li class="li_list"> <img src="/static/images/index/hongdian.png" class="img_dot"> <a href="#">平面设计(白天)</a> <span style="float: right; font-size:10px;" >04/01</span> </li>
+      </ul>
+                </div>
+            </div>            
+        </div>
+
+        <!-- new nav -->
+    <div class="container">
+        <div class="row">
+            <div class="span9">
+                <div class="tabbable">
+
+                  <ul class="nav nav-tabs" style="border-bottom: 1px solid red; border-radius: 4px; background-color: #C4C4C4; margin-bottom: 5px;">
+                        <li> <h4 class="h4_title">学生作品&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h4> </li>
+                        <li class="active"><a href="#5" data-toggle="tab">室内设计</a></li>
+                        <li><a href="#6" data-toggle="tab">建筑表现</a></li>
+                        <li><a href="#7" data-toggle="tab">平面设计</a></li>
+                        <li><a href="#8" data-toggle="tab">产品设计</a></li>
+                        <li><a href="#9" data-toggle="tab">3Dmax应用</a></li>
+                    </ul>
+                    <div class="tab-content row">
+                        <div class="tab-pane active" id="5">
+                            <div class="item span3" style="border:1px solid #949494; padding:4px; border-radius: 2px;">
+                                    <img src="/static/images/index/opus-a.jpg" alt=""  style="width:200px; height:360px;">
+                                    <h5>#厨房清晨表现# <span style="float:right;"> 毛小宝 </span> </h5>
+                            </div>
+                            <div>
+                                <div class="item span3"  style="margin-left:10px;border:1px solid #949494; padding:4px; border-radius: 2px;">
+                                    <img src="/static/images/index/opus-a.jpg" alt=""  style="width:270px; height:150px;">
+                                    <h5>#厨房清晨表现# <span style="float:right;"> 毛小宝 </span> </h5>
+                                </div>
+                                <div class="item span3"  style="margin-left:10px;border:1px solid #949494; padding:4px; border-radius: 2px;">
+                                    <img src="/static/images/index/opus-a.jpg" alt=""  style="width:270px; height:150px;">
+                                    <h5>#厨房清晨表现# <span style="float:right;"> 毛小宝 </span> </h5>
+                                </div>
+                                <div class="item span3"  style="margin-left:10px;margin-top:10px;border:1px solid #949494; padding:4px; border-radius: 2px;">
+                                    <img src="/static/images/index/opus-a.jpg" alt=""  style="width:270px; height:150px;">
+                                    <h5>#厨房清晨表现# <span style="float:right;"> 毛小宝 </span> </h5>
+                                </div>
+                                <div class="item span3"  style="margin-left:10px;margin-top:10px;border:1px solid #949494; padding:4px; border-radius: 2px;">
+                                    <img src="/static/images/index/opus-a.jpg" alt=""  style="width:270px; height:150px;">
+                                    <h5>#厨房清晨表现# <span style="float:right;"> 毛小宝 </span> </h5>
+                                </div>
+                            </div>
+
+                            {% for opus in opus_list %}
+                                <div class="item span2">
+                                    <img src="{{ opus.image_url }}" alt=""  style="height:170px;">
+                                    <h5>opus.title</h5>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+            </div>
+        </div>
+            <div class="span3" >
+                <h4 class="h4_title">就业名单</h4>
+                <table class="table table-striped table-borde#F7F7F7">
+                    <thead>
+                      <tr>
+                        <th>班级</th>
+                        <th>姓名</th>
+                        <th>就业公司</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>3D基础应用班</td>
+                            <td>毛小宝</td>
+                            <td>广州点艺</td>
+                      </tr>
+                      <tr>
+                            <td>室内设计高级班</td>
+                            <td>毛小宝</td>
+                            <td>广州点艺</td>
+                      </tr>
+                      <tr>
+                            <td>3D基础应用班</td>
+                            <td>毛小宝</td>
+                            <td>广州点艺</td>
+                      </tr>
+                      <tr>
+                            <td>室内设计高级班</td>
+                            <td>毛小宝</td>
+                            <td>广州点艺</td>
+                      </tr>
+                        {% for work in work_list %}
+                            <tr>
+                            <td>{{ work.course_category }}</td>
+                            <td>{{ work.name }}</td>
+                            <td>{{ work.company }}</td>
+                      </tr>
+                        {% endfor %}
+                    </tbody>
+                  </table>
+                  <hr/>
+                  <img src="/static/images/index/weixin.jpg" style="margin-left: 5px; margin-right: 5px; width:120px; height: 120px;">
+                  <h5 style="padding-left: 5px;"> 微信订阅,精品教程 </h5>
+            </div>
+        </div>
+    </div>
+
+    
+{% endblock %}
+
+{% block footer %}
+    {% include 'footer.htm' %}
+{% endblock %}
