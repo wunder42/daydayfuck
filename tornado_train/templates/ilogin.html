@@ -1,0 +1,18 @@
+<html>
+<head>
+	<title>user login</title>
+	<link href="../static/ibase.css" rel="stylesheet"></link>
+</head>
+<body>
+	<div class="icontainer">
+		<div class="login">
+			<h4> User Login </h4>
+			<form action="/login" method="post">
+				{% module xsrf_form_html() %}
+				<label>User</label> <input type="text" name="user" />
+				<input type="submit" name="submit" />
+			</form>
+		</div>
+	</div>
+</body>
+</html>

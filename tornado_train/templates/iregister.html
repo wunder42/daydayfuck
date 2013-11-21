@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>user register</title>
+	<link href="../static/ibase.css" rel="stylesheet"></link>
+	<style type="text/css"></style>
+</head>
+<body>
+	<div class="icontainer">
+		<div class="register">
+			<h4> User Register </h4>
+			<form action="/register" method="post">
+				{% module xsrf_form_html() %}
+				<label>User</label> <input type="text" name="user" />
+				<input type="submit" name="submit">
+			</form>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<html>
+<head>
+	<title>To-Do-List</title>
+	<link href="/static/ibase.css" rel="stylesheet"></link>
+	<link rel="stylesheet" href="/static/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/static/css/buttons.css">
+	<link href="/static/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+		.inote-list {
+			text-align: center;
+			position: relative;
+			/*box-shadow: 1px 1px 3px red;*/
+		}
+		#note-add-dialog {
+			position: absolute;
+			top: 60px;
+			left: 40px;
+			width: 200px;
+			height: 200px;
+			box-shadow: 1px 1px 3px rgb(206, 206, 221);
+			background-color: rgb(239, 239, 247);
+			z-index; 9999999;
+			/*display: none;*/
+		}
+		#note-add-dialog form {
+			position: relative;
+			top: 10px;
+			left: 0px;
+		}
+		#note-add-content {
+			height:30px;
+			width:200px;
+			border-color: rgb(206, 206, 221);
+			/*text-align: center;*/
+
+		}
+		.icircle {
+			margin:0 auto;
+			width:40px;
+			height:40px;
+			border-radius:20px;
+			background-color: rgb(206, 206, 221);
+			text-align: center;
+		}
+		.icircle a {
+			text-decoration: none;
+			color: white;
+			font-size:36px;
+			position: relative;
+			top: 0px;
+		}
+		.icircle:hover {
+			background-color: gray;
+			color: black;
+		}
+
+		.ilists {
+			margin: 10px 0 10px 0;
+			border-top: 1px solid gray;
+			border-bottom: 1px solid gray;
+			overflow: auto;
+			height: 500px;
+		}
+		.inote {
+			
+		}
+		.delta {
+			width:0px;
+			height:0px;
+			background-color: gray;
+			border-top: 6px solid rgb(206, 206, 221);
+			border-left: 10px solid white;
+			border-bottom: 6px solid white;
+			border-right: 10px solid rgb(206, 206, 221);
+			margin: 5px 335px 35px 305px;
+
+		}
+		.msg {
+			position: relative;
+			top: -6px;
+			left :10px;
+			height:40px;
+			width:320px;
+			text-align: center;
+			line-height: 20px;
+			font-size:16px;
+			background-color: rgb(206, 206, 221);
+		}
+		.msg a {
+			position: relative; 
+    		top:10px;
+    		font-size:24px;
+    		color:white;
+    		text-decoration:none;
+		}
+		.msg a:hover {
+			color: rgb(162, 152, 152);
+		}
+	</style>
+</head>
+<body>
+	<div class="icontainer">
+		<div class="inote-list">
+			<div><div class="icircle">
+	    		<a href="#" id="note-add">+</a>
+	    	</div></div>
+			
+			<div class="ilists">
+			{% for note in notes %}
+				<div class="delta inote">
+			    	<div class="msg">
+			    		<a href="#" nid={{note["nid"]}}>{{note["content"]}}</a>
+			    	</div>
+			    </div>
+			{% end %}
+			</div>
+			<div class="" id="note-add-dialog">
+				<form id="note-add-form">
+					<textarea id="note-add-content" rows="1" cols="20"></textarea>
+					<!-- <input type="submit" name="submit" > -->
+					<a href="#" class="button button-rounded button-flat-primary" id="note-add-submit" style="margin-top:120px">Submit</a>
+					<a href="#" class="button button-rounded button-flat-primary" id="note-add-cancel" style="margin-top:120px">Cancel</a>
+				</form>
+			</div>
+		</div>
+
+	</div>
+	<script src="/static/jquery-1.8.3.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="/static/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="/static/ibase.js"></script>
+</body>
+</html>
