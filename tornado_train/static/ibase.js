@@ -17,7 +17,11 @@
   getcookie = function(name) {
     var r;
     r = document.cookie.match("\\b" + name + "=([^;]*)\\b");
-    return r ? r[1] : undefined;
+    if (r) {
+      return r[1];
+    } else {
+      return null;
+    }
   };
 
   $("#note-add-submit").click(function(e) {
@@ -29,17 +33,32 @@
     };
     return $.post('/n/add', args, function(data, textStatus, xhr) {
       $("#note-add-cancel").click();
-      data = jQuery.parseJSON(data);
-      console.log($.type(data), textStatus);
-      if(data.status) {
-        $(".mCSB_container").delay(1).prepend('<div class="delta inote"><div class="msg"><a href="#">' + data.content + '</a></div></div>');
+      data = $.parseJSON(data);
+      console.log(data, textStatus);
+      if (data.status) {
+        $(".mCSB_container").prepend('<div class="delta inote"><div class="msg"><a href="#">' + 'X' + '</a></div></div>');
         return $(".ilists").mCustomScrollbar("scrollTo", "top");
       }
     });
   });
 
   $(".ilists").mCustomScrollbar({
-    verticalScroll: true
+    verticalScroll: true,
+    advanced: {
+      updateOnContentResize: true
+    }
+  });
+
+  $(".load-more").click(function(e) {
+    var d, data, _i, _len;
+    console.log(mcs.top, mcs.draggerTop);
+    data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    for (_i = 0, _len = data.length; _i < _len; _i++) {
+      d = data[_i];
+      $(".mCSB_container").prepend('<div class="delta inote"><div class="msg"><a href="#">' + d + '</a></div></div>');
+    }
+    $(".ilists").mCustomScrollbar("scrollTo", "top");
+    return console.log('load-more end');
   });
 
 }).call(this);

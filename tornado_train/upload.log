@@ -1,0 +1,134 @@
+2013-11-27 01:47:12,164 WARNING 403 POST / (127.0.0.1): '_xsrf' argument missing from POST
+2013-11-27 01:47:12,165 WARNING 403 POST / (127.0.0.1) 30.59ms
+2013-11-27 01:49:56,714 WARNING 403 POST / (127.0.0.1): '_xsrf' argument missing from POST
+2013-11-27 01:49:56,714 WARNING 403 POST / (127.0.0.1) 51.69ms
+2013-11-27 02:02:25,154 INFO debug
+2013-11-27 02:02:25,159 INFO 200 POST /u (127.0.0.1) 49.89ms
+2013-11-27 02:02:25,513 INFO 304 GET /static/js/ajaxuploadfile.js (127.0.0.1) 0.56ms
+2013-11-27 02:02:25,515 INFO 304 GET /static/base.js (127.0.0.1) 0.42ms
+2013-11-27 02:02:36,023 INFO debug
+2013-11-27 02:02:36,025 INFO 200 POST /u (127.0.0.1) 32.92ms
+2013-11-27 02:03:42,084 INFO debug
+2013-11-27 02:03:42,086 INFO 200 POST /u (127.0.0.1) 4.46ms
+2013-11-27 02:04:22,365 INFO debug
+2013-11-27 02:04:22,368 INFO 200 POST /u (127.0.0.1) 5.29ms
+2013-11-27 02:04:22,691 INFO 304 GET /static/jquery-1.8.3.min.js (127.0.0.1) 0.76ms
+2013-11-27 02:04:22,693 INFO 304 GET /static/js/ajaxuploadfile.js (127.0.0.1) 0.41ms
+2013-11-27 02:04:22,694 INFO 304 GET /static/base.js (127.0.0.1) 0.36ms
+2013-11-27 02:04:34,983 INFO debug
+2013-11-27 02:04:34,988 INFO 200 POST /u (127.0.0.1) 12.17ms
+2013-11-27 02:06:07,340 INFO debug
+2013-11-27 02:06:07,356 INFO 200 POST /u (127.0.0.1) 62.92ms
+2013-11-27 02:08:00,707 INFO 304 GET / (127.0.0.1) 1.07ms
+2013-11-27 02:08:01,073 INFO 304 GET /static/js/ajaxuploadfile.js (127.0.0.1) 0.54ms
+2013-11-27 02:08:01,075 INFO 304 GET /static/base.js (127.0.0.1) 0.39ms
+2013-11-27 02:08:07,409 WARNING 403 POST / (127.0.0.1): '_xsrf' argument missing from POST
+2013-11-27 02:08:07,409 WARNING 403 POST / (127.0.0.1) 63.69ms
+2013-11-27 02:09:24,823 INFO 304 GET / (127.0.0.1) 1.13ms
+2013-11-27 02:09:25,163 INFO 304 GET /static/jquery-1.8.3.min.js (127.0.0.1) 0.77ms
+2013-11-27 02:09:25,164 INFO 304 GET /static/js/ajaxuploadfile.js (127.0.0.1) 0.38ms
+2013-11-27 02:09:25,166 INFO 200 GET /static/base.js (127.0.0.1) 0.47ms
+2013-11-27 02:09:30,025 INFO 200 POST / (127.0.0.1) 0.38ms
+2013-11-27 02:09:30,047 WARNING 403 POST / (127.0.0.1): '_xsrf' argument missing from POST
+2013-11-27 02:09:30,048 WARNING 403 POST / (127.0.0.1) 18.35ms
+2013-11-27 02:20:40,375 INFO 200 POST / (127.0.0.1) 0.38ms
+2013-11-27 02:20:40,380 WARNING 403 POST / (127.0.0.1): '_xsrf' argument missing from POST
+2013-11-27 02:20:40,381 WARNING 403 POST / (127.0.0.1) 1.87ms
+2013-11-27 02:21:44,807 INFO 304 GET / (127.0.0.1) 1.17ms
+2013-11-27 02:21:45,187 INFO 304 GET /static/jquery-1.8.3.min.js (127.0.0.1) 0.77ms
+2013-11-27 02:21:45,191 INFO 200 GET /static/js/ajaxuploadfile.js (127.0.0.1) 1.28ms
+2013-11-27 02:21:45,192 INFO 200 GET /static/base.js (127.0.0.1) 0.44ms
+2013-11-27 02:24:43,519 INFO 304 GET / (127.0.0.1) 1.05ms
+2013-11-27 02:24:43,879 INFO 200 GET /static/js/ajaxuploadfile.js (127.0.0.1) 0.61ms
+2013-11-27 02:24:43,880 INFO 304 GET /static/jquery-1.8.3.min.js (127.0.0.1) 0.61ms
+2013-11-27 02:24:43,881 INFO 304 GET /static/base.js (127.0.0.1) 0.36ms
+2013-11-27 02:24:49,164 WARNING 403 POST / (127.0.0.1): '_xsrf' argument missing from POST
+2013-11-27 02:24:49,165 WARNING 403 POST / (127.0.0.1) 1.39ms
+2013-11-27 02:26:35,606 INFO 304 GET / (127.0.0.1) 3.42ms
+2013-11-27 02:26:35,991 INFO 304 GET /static/jquery-1.8.3.min.js (127.0.0.1) 0.77ms
+2013-11-27 02:26:35,992 INFO 200 GET /static/js/ajaxuploadfile.js (127.0.0.1) 0.47ms
+2013-11-27 02:26:35,997 INFO 304 GET /static/base.js (127.0.0.1) 0.50ms
+2013-11-27 02:26:41,223 WARNING 403 POST / (127.0.0.1): '_xsrf' argument missing from POST
+2013-11-27 02:26:41,224 WARNING 403 POST / (127.0.0.1) 1.61ms
+2013-11-27 02:28:36,859 INFO 304 GET / (127.0.0.1) 1.39ms
+2013-11-27 02:28:37,214 INFO 304 GET /static/jquery-1.8.3.min.js (127.0.0.1) 0.78ms
+2013-11-27 02:28:37,222 INFO 200 GET /static/js/ajaxuploadfile.js (127.0.0.1) 0.61ms
+2013-11-27 02:28:37,222 INFO 304 GET /static/base.js (127.0.0.1) 0.36ms
+2013-11-27 02:28:42,956 WARNING 403 POST / (127.0.0.1): '_xsrf' argument missing from POST
+2013-11-27 02:28:42,956 WARNING 403 POST / (127.0.0.1) 3.55ms
+2013-11-27 02:30:19,003 INFO 304 GET / (127.0.0.1) 1.16ms
+2013-11-27 02:30:19,363 INFO 304 GET /static/jquery-1.8.3.min.js (127.0.0.1) 0.77ms
+2013-11-27 02:30:19,364 INFO 304 GET /static/base.js (127.0.0.1) 0.37ms
+2013-11-27 02:30:19,365 INFO 200 GET /static/js/ajaxuploadfile.js (127.0.0.1) 0.45ms
+2013-11-27 02:30:23,473 INFO 200 POST / (127.0.0.1) 0.67ms
+2013-11-27 02:33:41,525 INFO upload.py modified; restarting server
+2013-11-27 02:33:49,643 INFO 200 GET / (127.0.0.1) 3.12ms
+2013-11-27 02:33:49,994 INFO 304 GET /static/jquery-1.8.3.min.js (127.0.0.1) 23.74ms
+2013-11-27 02:33:49,995 INFO 304 GET /static/js/ajaxuploadfile.js (127.0.0.1) 0.45ms
+2013-11-27 02:33:49,995 INFO 304 GET /static/base.js (127.0.0.1) 0.36ms
+2013-11-27 02:33:59,023 INFO async upload file
+2013-11-27 02:33:59,023 INFO 'NoneType' object has no attribute '__getitem__'
+2013-11-27 02:33:59,023 INFO 200 POST / (127.0.0.1) 14.78ms
+2013-11-27 02:34:38,880 INFO upload.py modified; restarting server
+2013-11-27 02:34:58,232 INFO 200 GET / (127.0.0.1) 4.49ms
+2013-11-27 02:34:58,629 INFO 304 GET /static/jquery-1.8.3.min.js (127.0.0.1) 3.44ms
+2013-11-27 02:34:58,630 INFO 304 GET /static/js/ajaxuploadfile.js (127.0.0.1) 0.43ms
+2013-11-27 02:34:58,631 INFO 304 GET /static/base.js (127.0.0.1) 0.35ms
+2013-11-27 02:35:03,017 INFO async upload file
+2013-11-27 02:35:03,018 INFO 'NoneType' object has no attribute '__getitem__'
+2013-11-27 02:35:03,018 INFO 200 POST / (127.0.0.1) 0.85ms
+2013-11-27 02:35:41,967 INFO upload.py modified; restarting server
+2013-11-27 02:35:43,206 INFO 200 GET / (127.0.0.1) 3.09ms
+2013-11-27 02:35:43,566 INFO 304 GET /static/jquery-1.8.3.min.js (127.0.0.1) 3.49ms
+2013-11-27 02:35:43,567 INFO 304 GET /static/js/ajaxuploadfile.js (127.0.0.1) 0.44ms
+2013-11-27 02:35:43,568 INFO 304 GET /static/base.js (127.0.0.1) 0.36ms
+2013-11-27 02:35:47,925 INFO async upload file
+2013-11-27 02:35:47,926 INFO 200 POST / (127.0.0.1) 1.47ms
+2013-11-27 02:38:41,056 INFO upload.py modified; restarting server
+2013-11-27 02:38:44,599 INFO 200 GET / (127.0.0.1) 8.00ms
+2013-11-27 02:38:44,940 INFO 304 GET /static/jquery-1.8.3.min.js (127.0.0.1) 3.46ms
+2013-11-27 02:38:44,940 INFO 304 GET /static/js/ajaxuploadfile.js (127.0.0.1) 0.42ms
+2013-11-27 02:38:44,941 INFO 304 GET /static/base.js (127.0.0.1) 0.37ms
+2013-11-27 02:38:49,218 INFO async upload file
+2013-11-27 02:38:49,220 ERROR Uncaught exception POST / (127.0.0.1)
+HTTPRequest(protocol='http', host='127.0.0.1:4399', method='POST', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'http://127.0.0.1:4399', 'Content-Length': '140791', 'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip,deflate,sdch', 'Host': '127.0.0.1:4399', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.114 Safari/537.36', 'Connection': 'keep-alive', 'Referer': 'http://127.0.0.1:4399/', 'Cookie': '_xsrf=f457d5aab86049b0a62ea2c12d768a8c', 'Content-Type': 'multipart/form-data; boundary=----WebKitFormBoundaryBi5tnKvkLubs5BPC'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1141, in _when_complete
+    callback()
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1162, in _execute_method
+    self._when_complete(method(*self.path_args, **self.path_kwargs),
+  File "upload.py", line 42, in post
+    self.write(escape.encodeJSON({'status':'success'}))
+AttributeError: 'module' object has no attribute 'encodeJSON'
+2013-11-27 02:38:49,221 ERROR 500 POST / (127.0.0.1) 4.07ms
+2013-11-27 02:40:31,143 INFO upload.py modified; restarting server
+2013-11-27 02:40:36,165 INFO 304 GET / (127.0.0.1) 2.97ms
+2013-11-27 02:40:36,555 INFO 304 GET /static/jquery-1.8.3.min.js (127.0.0.1) 3.39ms
+2013-11-27 02:40:36,556 INFO 304 GET /static/js/ajaxuploadfile.js (127.0.0.1) 0.42ms
+2013-11-27 02:40:36,557 INFO 304 GET /static/base.js (127.0.0.1) 0.36ms
+2013-11-27 02:40:41,726 INFO async upload file
+2013-11-27 02:40:41,727 INFO 200 POST / (127.0.0.1) 21.35ms
+2013-11-27 02:41:37,230 INFO upload.py modified; restarting server
+2013-11-27 02:41:39,400 INFO 200 GET / (127.0.0.1) 3.24ms
+2013-11-27 02:41:39,776 INFO 304 GET /static/jquery-1.8.3.min.js (127.0.0.1) 3.38ms
+2013-11-27 02:41:39,777 INFO 304 GET /static/js/ajaxuploadfile.js (127.0.0.1) 0.45ms
+2013-11-27 02:41:39,778 INFO 304 GET /static/base.js (127.0.0.1) 0.36ms
+2013-11-27 02:41:43,822 INFO async upload file
+2013-11-27 02:41:43,826 ERROR Uncaught exception POST / (127.0.0.1)
+HTTPRequest(protocol='http', host='127.0.0.1:4399', method='POST', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'http://127.0.0.1:4399', 'Content-Length': '305126', 'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip,deflate,sdch', 'Host': '127.0.0.1:4399', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.114 Safari/537.36', 'Connection': 'keep-alive', 'Referer': 'http://127.0.0.1:4399/', 'Cookie': '_xsrf=f457d5aab86049b0a62ea2c12d768a8c', 'Content-Type': 'multipart/form-data; boundary=----WebKitFormBoundaryfnqeccOBmKHAHtU4'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1141, in _when_complete
+    callback()
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1162, in _execute_method
+    self._when_complete(method(*self.path_args, **self.path_kwargs),
+  File "upload.py", line 42, in post
+    self.write(json.dump({'status':'success'}))
+TypeError: dump() takes at least 2 arguments (1 given)
+2013-11-27 02:41:43,827 ERROR 500 POST / (127.0.0.1) 7.45ms
+2013-11-27 02:41:56,828 INFO upload.py modified; restarting server
+2013-11-27 02:41:59,892 INFO 304 GET / (127.0.0.1) 3.16ms
+2013-11-27 02:42:00,287 INFO 304 GET /static/jquery-1.8.3.min.js (127.0.0.1) 3.39ms
+2013-11-27 02:42:00,289 INFO 304 GET /static/js/ajaxuploadfile.js (127.0.0.1) 0.45ms
+2013-11-27 02:42:00,290 INFO 304 GET /static/base.js (127.0.0.1) 0.36ms
+2013-11-27 02:42:06,777 INFO async upload file
+2013-11-27 02:42:06,779 INFO 200 POST / (127.0.0.1) 4.05ms

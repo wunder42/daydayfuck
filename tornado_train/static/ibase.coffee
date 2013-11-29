@@ -9,7 +9,7 @@ $("#note-add-cancel").click (e) ->
 
 getcookie = (name) ->
     r = document.cookie.match "\\b" + name + "=([^;]*)\\b"
-    if r[1] then r else 0
+    if r then r[1] else null
     
 
 $("#note-add-submit").click (e)->
@@ -23,7 +23,21 @@ $("#note-add-submit").click (e)->
             $(".mCSB_container").prepend '<div class="delta inote"><div class="msg"><a href="#">'+'X'+'</a></div></div>'
             $(".ilists").mCustomScrollbar "scrollTo", "top"
 
-$(".ilists").mCustomScrollbar {verticalScroll:true}
+$(".ilists").mCustomScrollbar {
+    verticalScroll:true
+    advanced: {
+        updateOnContentResize: true
+    }
+}
+
+$(".load-more").click (e) ->
+    console.log mcs.top, mcs.draggerTop
+    data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    for d in data
+        $(".mCSB_container").prepend '<div class="delta inote"><div class="msg"><a href="#">'+d+'</a></div></div>'
+    $(".ilists").mCustomScrollbar "scrollTo", "top"
+    console.log 'load-more end'
+
 
 
 
