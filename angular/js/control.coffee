@@ -7,7 +7,7 @@
 angular.module('newst', []).config ['$routeProvider', ($routeProvider) -> 
     $routeProvider.
         when('/new', {templateUrl: 'new/new-list.html', controller: NewsCtrl}).
-        when('/new/:newid', {templateUrl: 'new/new-detail.html', controller: NewDetailCtrl}).
+        when('/new/:newid', {templateUrl: 'new/new-detail.html', controller: NewsDetailCtrl}).
         otherwise {redirectTo: '/new'}
     ]
 
