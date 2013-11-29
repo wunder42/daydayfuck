@@ -1,0 +1,44 @@
+<!-- Home -->
+<div data-role="page" id="page1">
+    <div data-theme="d" data-role="header" class="tool-bar">
+        <h3>
+            点艺报名
+        </h3>
+    </div>
+    <div data-role="content">
+        <form action="/wx/register/" method="POST" class="register-tool">
+            <div data-role="fieldcontain">
+                <label for="textinput1">
+                    姓名：
+                </label>
+                <input name="name" id="textinput1" placeholder="点艺" value="" type="text"
+                data-mini="true">
+            </div>
+            <div data-role="fieldcontain">
+                <label for="textinput2">
+                    学校：
+                </label>
+                <input name="college" id="textinput2" placeholder="农大" value="" type="text"
+                data-mini="true">
+            </div>
+            <div data-role="fieldcontain">
+                <label for="textinput3">
+                    QQ：
+                </label>
+                <input name="qq" id="textinput3" placeholder="123456" value="" type="number"
+                data-mini="true">
+            </div>
+            <div data-role="fieldcontain">
+                <label for="selectmenu1">
+                    课程：
+                </label>
+                <select id="selectmenu1" name="" data-theme="d" data-mini="true">
+                    <option value="3dmax">
+                        3DMAX
+                    </option>
+                </select>
+            </div>
+            <input type="submit" data-theme="d" value="提交" data-mini="true" class="dysubmit">
+        </form>
+    </div>
+</div>
