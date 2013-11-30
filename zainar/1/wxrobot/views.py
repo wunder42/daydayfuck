@@ -1,14 +1,14 @@
-# -*- coding:utf-8 -*-
-from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import render_to_response
-from official import WxRequest, WxTextResponse
-import hashlib
-# from bae.api import logging
+#! -*- coding:utf-8 -*-
+import hashlib, json, logging
 from datetime import datetime
-from django.views.decorators.csrf import csrf_exempt 
-from utils import Weather, BaiduBus
+
+from django.http import HttpResponse
+from django.shortcuts import render_to_response
+from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import TemplateView
-import json
+
+from official import WxRequest, WxTextResponse
+from utils import Weather, BaiduBus
 
 @csrf_exempt
 def index(request): 
@@ -17,6 +17,7 @@ def index(request):
     nonce = request.GET.get("nonce", None)  
     echoStr = request.GET.get("echostr",None) 
     token = "dianyiwx"
+
     if request.method == 'GET':  
         tmpList = [token,timestamp,nonce]  
         tmpList.sort()
@@ -24,35 +25,25 @@ def index(request):
         tmpstr = hashlib.sha1(tmpstr).hexdigest()  
         if tmpstr == signature:  
             return HttpResponse(echoStr)
+
     req = WxRequest(request.body)
-    # logging.info(req)
-    if req.MsgType == 'text':
-        # return HttpResponse(WxTextResponse(req.Content, req).as_xml())
-        return parseText(req.Content, req)
-    elif req.MsgType == 'event' and req.Event == 'subscribe':
-        return HttpResponse(WxTextResponse(u'欢迎来到小刀的世界，因为我你不再寂寞。。。请按提示操作：0.帮助文档 1.冷笑话',
-                                           req).as_xml())
-    else:
-        return HttpResponse(WxTextResponse('嘿，小心使用！',
-                                           req).as_xml())
-    return HttpResponse("error")
+    return parse2deal(req)
 
-def parseText(text, req):
-    if '1' == text:
-        '''冷笑话'''
-        content = u"芝忠说：好巧哦，在广州遇见你。小毛说：是是是，心灵手巧而已 —— ——！！！"
-    elif '0' == text:
-        '''帮助文档'''
-        content = u"0.帮助文档 1.冷笑话 2.广州天气 3."
-    elif '2' == text:
-        '''广州天气'''
-        weather = Weather()
-        req_text = "%s|%s|%s|%s" % (weather.temp[0], weather.weather[0], weather.wind[0], weather.index)
-        return HttpResponse(WxTextResponse(req_text, req).as_xml())
-    else:
-        content = u"别整那些没用的！！！"
-    return HttpResponse(WxTextResponse(content, req).as_xml())
+def parse2deal(request):
+	logging.info(request)
 
+	if 'event' == request.MsgType and 'subscribe' == request.Event:
+		return HttpResponse(WxTextResponse(u'welcome daydayHappy family...', request).as_xml())
+	elif 'text' == request.MsgType:
+		return HttpResponse(WxTextResponse(u'...', request).as_xml())
+	else:
+		return HttpResponse(WxTextResponse('error parse', request).as_xml())
+
+
+
+'''
+other service
+'''
 class RegisterView(TemplateView):
     template_name = 'wx-dy-base.html'
 
@@ -81,3 +72,4 @@ def add_register(request):
             pass
     # return HttpResponse(json.dumps({}), mimetype="application/json")
     return render_to_response('result.html', {'result': succ})
+

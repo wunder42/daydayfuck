@@ -1,0 +1,221 @@
+2013-11-29 21:53:00,022 ERROR base.handle_uncaught_exception Line:215 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 298, in resolve
+    for pattern in self.url_patterns:
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/wunder/www/daydayfuck/zainar/1/xiaobao/urls.py", line 12, in <module>
+    url(r'^wx/', include('<wxrobot class="urls"></wxrobot>')),
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 24, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+ImportError: Import by filename is not supported.
+2013-11-29 21:53:00,653 ERROR base.handle_uncaught_exception Line:215 Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/middleware/common.py", line 67, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 531, in is_valid_path
+    resolve(path, urlconf)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 420, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 298, in resolve
+    for pattern in self.url_patterns:
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/wunder/www/daydayfuck/zainar/1/xiaobao/urls.py", line 12, in <module>
+    url(r'^wx/', include('<wxrobot class="urls"></wxrobot>')),
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 24, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+ImportError: Import by filename is not supported.
+2013-11-29 21:54:45,117 ERROR base.handle_uncaught_exception Line:215 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 298, in resolve
+    for pattern in self.url_patterns:
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/wunder/www/daydayfuck/zainar/1/xiaobao/urls.py", line 12, in <module>
+    url(r'^wx/', include('wxroot.urls')),
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 24, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+ImportError: No module named wxroot.urls
+2013-11-29 21:54:45,750 ERROR base.handle_uncaught_exception Line:215 Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/middleware/common.py", line 67, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 531, in is_valid_path
+    resolve(path, urlconf)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 420, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 298, in resolve
+    for pattern in self.url_patterns:
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/wunder/www/daydayfuck/zainar/1/xiaobao/urls.py", line 12, in <module>
+    url(r'^wx/', include('wxroot.urls')),
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 24, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+ImportError: No module named wxroot.urls
+2013-11-30 01:24:19,825 ERROR base.handle_uncaught_exception Line:215 Internal Server Error: /wx
+Traceback (most recent call last):
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/middleware/common.py", line 77, in process_request
+    "settings.") % (new_url[0], new_url[1]))
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/wx/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2013-11-30 01:38:18,183 ERROR base.handle_uncaught_exception Line:215 Internal Server Error: /wx/
+Traceback (most recent call last):
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 298, in resolve
+    for pattern in self.url_patterns:
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/wunder/www/daydayfuck/zainar/1/xiaobao/urls.py", line 12, in <module>
+    url(r'^wx/', include('wxrobot.urls')),
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 24, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/wunder/www/daydayfuck/zainar/1/wxrobot/urls.py", line 2, in <module>
+    from views import RegisterView
+ImportError: cannot import name RegisterView
+2013-11-30 01:38:21,583 ERROR base.handle_uncaught_exception Line:215 Internal Server Error: /wx/
+Traceback (most recent call last):
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 298, in resolve
+    for pattern in self.url_patterns:
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/wunder/www/daydayfuck/zainar/1/xiaobao/urls.py", line 12, in <module>
+    url(r'^wx/', include('wxrobot.urls')),
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 24, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/wunder/www/daydayfuck/zainar/1/wxrobot/urls.py", line 2, in <module>
+    from views import RegisterView
+ImportError: cannot import name RegisterView
+2013-11-30 01:38:53,764 ERROR base.handle_uncaught_exception Line:215 Internal Server Error: /wx/
+Traceback (most recent call last):
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 298, in resolve
+    for pattern in self.url_patterns:
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/wunder/www/daydayfuck/zainar/1/xiaobao/urls.py", line 12, in <module>
+    url(r'^wx/', include('wxrobot.urls')),
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 24, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/wunder/www/daydayfuck/zainar/1/wxrobot/urls.py", line 2, in <module>
+    from views import RegisterView
+ImportError: cannot import name RegisterView
+2013-11-30 01:38:56,759 ERROR base.handle_uncaught_exception Line:215 Internal Server Error: /wx/
+Traceback (most recent call last):
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 298, in resolve
+    for pattern in self.url_patterns:
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/wunder/www/daydayfuck/zainar/1/xiaobao/urls.py", line 12, in <module>
+    url(r'^wx/', include('wxrobot.urls')),
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 24, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/wunder/www/daydayfuck/zainar/1/wxrobot/urls.py", line 2, in <module>
+    from views import RegisterView
+ImportError: cannot import name RegisterView
+2013-11-30 01:40:24,592 ERROR base.handle_uncaught_exception Line:215 Internal Server Error: /wx/
+Traceback (most recent call last):
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/wunder/www/daydayfuck/zainar/1/wxrobot/views.py", line 30, in index
+    parse2deal(req)
+  File "/home/wunder/www/daydayfuck/zainar/1/wxrobot/views.py", line 33, in parse2deal
+    logging.info(req)
+NameError: global name 'logging' is not defined
+2013-11-30 01:40:48,558 ERROR base.handle_uncaught_exception Line:215 Internal Server Error: /wx/
+Traceback (most recent call last):
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/wunder/www/daydayfuck/zainar/1/wxrobot/views.py", line 30, in index
+    parse2deal(req)
+  File "/home/wunder/www/daydayfuck/zainar/1/wxrobot/views.py", line 33, in parse2deal
+    logging.info(req)
+NameError: global name 'req' is not defined
+2013-11-30 01:41:07,313 INFO views.parse2deal Line:33 <wxrobot.official.WxRequest object at 0x7fdf80026450>
+2013-11-30 01:41:07,313 ERROR base.handle_uncaught_exception Line:215 Internal Server Error: /wx/
+Traceback (most recent call last):
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/wunder/www/daydayfuck/zainar/1/wxrobot/views.py", line 30, in index
+    parse2deal(req)
+  File "/home/wunder/www/daydayfuck/zainar/1/wxrobot/views.py", line 35, in parse2deal
+    if 'event' == req.MsgType and 'subscribe' == req.Event:
+NameError: global name 'req' is not defined
+2013-11-30 01:41:36,276 INFO views.parse2deal Line:33 <wxrobot.official.WxRequest object at 0x1b0c450>
+2013-11-30 01:41:36,277 ERROR base.handle_uncaught_exception Line:215 Internal Server Error: /wx/
+Traceback (most recent call last):
+  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 129, in get_response
+    raise ValueError("The view %s.%s didn't return an HttpResponse object." % (callback.__module__, view_name))
+ValueError: The view wxrobot.views.index didn't return an HttpResponse object.
+2013-11-30 01:42:26,291 INFO views.parse2deal Line:33 <wxrobot.official.WxRequest object at 0x1fed450>
+2013-11-30 01:42:37,174 INFO views.parse2deal Line:33 <wxrobot.official.WxRequest object at 0x7fdc200de810>
