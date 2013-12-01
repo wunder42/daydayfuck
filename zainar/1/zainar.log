@@ -1,221 +1,227 @@
-2013-11-29 21:53:00,022 ERROR base.handle_uncaught_exception Line:215 Internal Server Error: /
+2013-11-30 22:20:56,246 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:20:56,248 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"-1"}
+2013-11-30 22:20:56,248 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'-1'}
+2013-11-30 22:22:11,551 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:22:11,553 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"-1"}
+2013-11-30 22:22:11,553 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'-1'}
+2013-11-30 22:22:11,554 INFO views.parse2deal Line:76 1
+2013-11-30 22:22:11,554 ERROR base.handle_uncaught_exception Line:215 Internal Server Error: /wx/
 Traceback (most recent call last):
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
-    request.path_info)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 298, in resolve
-    for pattern in self.url_patterns:
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 328, in url_patterns
-    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 323, in urlconf_module
-    self._urlconf_module = import_module(self.urlconf_name)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
-    __import__(name)
-  File "/home/wunder/www/daydayfuck/zainar/1/xiaobao/urls.py", line 12, in <module>
-    url(r'^wx/', include('<wxrobot class="urls"></wxrobot>')),
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 24, in include
-    urlconf_module = import_module(urlconf_module)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
-    __import__(name)
-ImportError: Import by filename is not supported.
-2013-11-29 21:53:00,653 ERROR base.handle_uncaught_exception Line:215 Internal Server Error: /favicon.ico
-Traceback (most recent call last):
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 89, in get_response
-    response = middleware_method(request)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/middleware/common.py", line 67, in process_request
-    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 531, in is_valid_path
-    resolve(path, urlconf)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 420, in resolve
-    return get_resolver(urlconf).resolve(path)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 298, in resolve
-    for pattern in self.url_patterns:
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 328, in url_patterns
-    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 323, in urlconf_module
-    self._urlconf_module = import_module(self.urlconf_name)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
-    __import__(name)
-  File "/home/wunder/www/daydayfuck/zainar/1/xiaobao/urls.py", line 12, in <module>
-    url(r'^wx/', include('<wxrobot class="urls"></wxrobot>')),
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 24, in include
-    urlconf_module = import_module(urlconf_module)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
-    __import__(name)
-ImportError: Import by filename is not supported.
-2013-11-29 21:54:45,117 ERROR base.handle_uncaught_exception Line:215 Internal Server Error: /
-Traceback (most recent call last):
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
-    request.path_info)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 298, in resolve
-    for pattern in self.url_patterns:
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 328, in url_patterns
-    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 323, in urlconf_module
-    self._urlconf_module = import_module(self.urlconf_name)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
-    __import__(name)
-  File "/home/wunder/www/daydayfuck/zainar/1/xiaobao/urls.py", line 12, in <module>
-    url(r'^wx/', include('wxroot.urls')),
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 24, in include
-    urlconf_module = import_module(urlconf_module)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
-    __import__(name)
-ImportError: No module named wxroot.urls
-2013-11-29 21:54:45,750 ERROR base.handle_uncaught_exception Line:215 Internal Server Error: /favicon.ico
-Traceback (most recent call last):
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 89, in get_response
-    response = middleware_method(request)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/middleware/common.py", line 67, in process_request
-    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 531, in is_valid_path
-    resolve(path, urlconf)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 420, in resolve
-    return get_resolver(urlconf).resolve(path)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 298, in resolve
-    for pattern in self.url_patterns:
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 328, in url_patterns
-    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 323, in urlconf_module
-    self._urlconf_module = import_module(self.urlconf_name)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
-    __import__(name)
-  File "/home/wunder/www/daydayfuck/zainar/1/xiaobao/urls.py", line 12, in <module>
-    url(r'^wx/', include('wxroot.urls')),
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 24, in include
-    urlconf_module = import_module(urlconf_module)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
-    __import__(name)
-ImportError: No module named wxroot.urls
-2013-11-30 01:24:19,825 ERROR base.handle_uncaught_exception Line:215 Internal Server Error: /wx
-Traceback (most recent call last):
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 89, in get_response
-    response = middleware_method(request)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/middleware/common.py", line 77, in process_request
-    "settings.") % (new_url[0], new_url[1]))
-RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/wx/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
-2013-11-30 01:38:18,183 ERROR base.handle_uncaught_exception Line:215 Internal Server Error: /wx/
-Traceback (most recent call last):
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
-    request.path_info)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 298, in resolve
-    for pattern in self.url_patterns:
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 328, in url_patterns
-    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 323, in urlconf_module
-    self._urlconf_module = import_module(self.urlconf_name)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
-    __import__(name)
-  File "/home/wunder/www/daydayfuck/zainar/1/xiaobao/urls.py", line 12, in <module>
-    url(r'^wx/', include('wxrobot.urls')),
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 24, in include
-    urlconf_module = import_module(urlconf_module)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
-    __import__(name)
-  File "/home/wunder/www/daydayfuck/zainar/1/wxrobot/urls.py", line 2, in <module>
-    from views import RegisterView
-ImportError: cannot import name RegisterView
-2013-11-30 01:38:21,583 ERROR base.handle_uncaught_exception Line:215 Internal Server Error: /wx/
-Traceback (most recent call last):
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
-    request.path_info)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 298, in resolve
-    for pattern in self.url_patterns:
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 328, in url_patterns
-    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 323, in urlconf_module
-    self._urlconf_module = import_module(self.urlconf_name)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
-    __import__(name)
-  File "/home/wunder/www/daydayfuck/zainar/1/xiaobao/urls.py", line 12, in <module>
-    url(r'^wx/', include('wxrobot.urls')),
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 24, in include
-    urlconf_module = import_module(urlconf_module)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
-    __import__(name)
-  File "/home/wunder/www/daydayfuck/zainar/1/wxrobot/urls.py", line 2, in <module>
-    from views import RegisterView
-ImportError: cannot import name RegisterView
-2013-11-30 01:38:53,764 ERROR base.handle_uncaught_exception Line:215 Internal Server Error: /wx/
-Traceback (most recent call last):
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
-    request.path_info)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 298, in resolve
-    for pattern in self.url_patterns:
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 328, in url_patterns
-    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 323, in urlconf_module
-    self._urlconf_module = import_module(self.urlconf_name)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
-    __import__(name)
-  File "/home/wunder/www/daydayfuck/zainar/1/xiaobao/urls.py", line 12, in <module>
-    url(r'^wx/', include('wxrobot.urls')),
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 24, in include
-    urlconf_module = import_module(urlconf_module)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
-    __import__(name)
-  File "/home/wunder/www/daydayfuck/zainar/1/wxrobot/urls.py", line 2, in <module>
-    from views import RegisterView
-ImportError: cannot import name RegisterView
-2013-11-30 01:38:56,759 ERROR base.handle_uncaught_exception Line:215 Internal Server Error: /wx/
-Traceback (most recent call last):
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
-    request.path_info)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 298, in resolve
-    for pattern in self.url_patterns:
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 328, in url_patterns
-    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 323, in urlconf_module
-    self._urlconf_module = import_module(self.urlconf_name)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
-    __import__(name)
-  File "/home/wunder/www/daydayfuck/zainar/1/xiaobao/urls.py", line 12, in <module>
-    url(r'^wx/', include('wxrobot.urls')),
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 24, in include
-    urlconf_module = import_module(urlconf_module)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
-    __import__(name)
-  File "/home/wunder/www/daydayfuck/zainar/1/wxrobot/urls.py", line 2, in <module>
-    from views import RegisterView
-ImportError: cannot import name RegisterView
-2013-11-30 01:40:24,592 ERROR base.handle_uncaught_exception Line:215 Internal Server Error: /wx/
-Traceback (most recent call last):
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
     response = callback(request, *callback_args, **callback_kwargs)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
     return view_func(*args, **kwargs)
-  File "/home/wunder/www/daydayfuck/zainar/1/wxrobot/views.py", line 30, in index
-    parse2deal(req)
-  File "/home/wunder/www/daydayfuck/zainar/1/wxrobot/views.py", line 33, in parse2deal
-    logging.info(req)
-NameError: global name 'logging' is not defined
-2013-11-30 01:40:48,558 ERROR base.handle_uncaught_exception Line:215 Internal Server Error: /wx/
-Traceback (most recent call last):
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
-    return view_func(*args, **kwargs)
-  File "/home/wunder/www/daydayfuck/zainar/1/wxrobot/views.py", line 30, in index
-    parse2deal(req)
-  File "/home/wunder/www/daydayfuck/zainar/1/wxrobot/views.py", line 33, in parse2deal
-    logging.info(req)
-NameError: global name 'req' is not defined
-2013-11-30 01:41:07,313 INFO views.parse2deal Line:33 <wxrobot.official.WxRequest object at 0x7fdf80026450>
-2013-11-30 01:41:07,313 ERROR base.handle_uncaught_exception Line:215 Internal Server Error: /wx/
-Traceback (most recent call last):
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
-    return view_func(*args, **kwargs)
-  File "/home/wunder/www/daydayfuck/zainar/1/wxrobot/views.py", line 30, in index
-    parse2deal(req)
-  File "/home/wunder/www/daydayfuck/zainar/1/wxrobot/views.py", line 35, in parse2deal
-    if 'event' == req.MsgType and 'subscribe' == req.Event:
-NameError: global name 'req' is not defined
-2013-11-30 01:41:36,276 INFO views.parse2deal Line:33 <wxrobot.official.WxRequest object at 0x1b0c450>
-2013-11-30 01:41:36,277 ERROR base.handle_uncaught_exception Line:215 Internal Server Error: /wx/
-Traceback (most recent call last):
-  File "/home/wunder/dev/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 129, in get_response
-    raise ValueError("The view %s.%s didn't return an HttpResponse object." % (callback.__module__, view_name))
-ValueError: The view wxrobot.views.index didn't return an HttpResponse object.
-2013-11-30 01:42:26,291 INFO views.parse2deal Line:33 <wxrobot.official.WxRequest object at 0x1fed450>
-2013-11-30 01:42:37,174 INFO views.parse2deal Line:33 <wxrobot.official.WxRequest object at 0x7fdc200de810>
+  File "/home/knife/dev/codehub/daydayfuck/zainar/1/wxrobot/views.py", line 50, in index
+    return parse2deal(req)
+  File "/home/knife/dev/codehub/daydayfuck/zainar/1/wxrobot/views.py", line 80, in parse2deal
+    Wxuser.update_user(_tmp['openid'], {'jokeTimestamp':_timestamp})
+TypeError: update_user() takes exactly 1 argument (2 given)
+2013-11-30 22:24:43,100 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:24:43,101 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"-1"}
+2013-11-30 22:24:43,102 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'-1'}
+2013-11-30 22:24:43,103 INFO views.parse2deal Line:76 1
+2013-11-30 22:24:52,975 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:24:52,976 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385004181"}
+2013-11-30 22:24:52,976 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385004181'}
+2013-11-30 22:24:52,979 INFO views.parse2deal Line:76 1
+2013-11-30 22:25:04,390 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:25:04,391 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385011381"}
+2013-11-30 22:25:04,392 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385011381'}
+2013-11-30 22:25:04,395 INFO views.parse2deal Line:76 1
+2013-11-30 22:25:07,340 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:25:07,340 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385018581"}
+2013-11-30 22:25:07,341 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385018581'}
+2013-11-30 22:25:07,341 INFO views.parse2deal Line:76 1
+2013-11-30 22:26:20,786 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:26:20,787 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385025781"}
+2013-11-30 22:26:20,787 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385025781'}
+2013-11-30 22:26:20,788 INFO views.parse2deal Line:76 1
+2013-11-30 22:26:37,686 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:26:37,690 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385029381"}
+2013-11-30 22:26:37,690 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385029381'}
+2013-11-30 22:26:37,694 INFO views.parse2deal Line:76 1
+2013-11-30 22:26:51,823 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:26:51,824 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385090581"}
+2013-11-30 22:26:51,824 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385090581'}
+2013-11-30 22:26:51,827 INFO views.parse2deal Line:76 1
+2013-11-30 22:27:01,599 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:27:01,600 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385097781"}
+2013-11-30 22:27:01,601 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385097781'}
+2013-11-30 22:27:01,604 INFO views.parse2deal Line:76 1
+2013-11-30 22:27:06,686 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:27:06,689 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385104981"}
+2013-11-30 22:27:06,690 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385104981'}
+2013-11-30 22:27:06,693 INFO views.parse2deal Line:76 1
+2013-11-30 22:27:13,688 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:27:13,688 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385112181"}
+2013-11-30 22:27:13,688 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385112181'}
+2013-11-30 22:27:13,689 INFO views.parse2deal Line:76 1
+2013-11-30 22:27:16,518 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:27:16,520 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385115791"}
+2013-11-30 22:27:16,521 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385115791'}
+2013-11-30 22:27:16,523 INFO views.parse2deal Line:76 1
+2013-11-30 22:27:19,918 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:27:19,920 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385176981"}
+2013-11-30 22:27:19,920 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385176981'}
+2013-11-30 22:27:19,923 INFO views.parse2deal Line:76 1
+2013-11-30 22:27:34,990 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:27:34,992 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385184181"}
+2013-11-30 22:27:34,992 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385184181'}
+2013-11-30 22:27:34,995 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:02,745 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:02,745 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385191381"}
+2013-11-30 22:28:02,746 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385191381'}
+2013-11-30 22:28:02,746 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:07,943 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:07,944 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385198581"}
+2013-11-30 22:28:07,945 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385198581'}
+2013-11-30 22:28:07,947 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:08,383 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:08,383 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385202182"}
+2013-11-30 22:28:08,383 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385202182'}
+2013-11-30 22:28:08,384 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:08,967 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:08,968 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385263381"}
+2013-11-30 22:28:08,969 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385263381'}
+2013-11-30 22:28:08,971 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:09,262 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:09,264 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385270581"}
+2013-11-30 22:28:09,266 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385270581'}
+2013-11-30 22:28:09,268 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:09,662 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:09,664 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385277781"}
+2013-11-30 22:28:09,664 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385277781'}
+2013-11-30 22:28:09,667 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:09,846 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:09,848 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385284981"}
+2013-11-30 22:28:09,848 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385284981'}
+2013-11-30 22:28:09,851 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:10,031 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:10,032 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385288581"}
+2013-11-30 22:28:10,033 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385288581'}
+2013-11-30 22:28:10,035 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:10,350 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:10,352 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385349781"}
+2013-11-30 22:28:10,353 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385349781'}
+2013-11-30 22:28:10,355 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:10,534 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:10,536 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385356982"}
+2013-11-30 22:28:10,536 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385356982'}
+2013-11-30 22:28:10,539 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:10,886 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:10,888 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385364182"}
+2013-11-30 22:28:10,888 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385364182'}
+2013-11-30 22:28:10,891 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:11,062 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:11,064 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385371381"}
+2013-11-30 22:28:11,065 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385371381'}
+2013-11-30 22:28:11,067 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:11,222 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:11,224 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385374981"}
+2013-11-30 22:28:11,224 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385374981'}
+2013-11-30 22:28:11,227 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:11,374 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:11,376 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385436182"}
+2013-11-30 22:28:11,376 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385436182'}
+2013-11-30 22:28:11,379 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:11,550 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:11,551 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385443381"}
+2013-11-30 22:28:11,552 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385443381'}
+2013-11-30 22:28:11,554 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:14,697 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:14,698 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385450581"}
+2013-11-30 22:28:14,698 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385450581'}
+2013-11-30 22:28:14,699 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:15,071 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:15,072 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385457781"}
+2013-11-30 22:28:15,073 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385457781'}
+2013-11-30 22:28:15,075 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:15,247 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:15,248 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385461381"}
+2013-11-30 22:28:15,249 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385461381'}
+2013-11-30 22:28:15,251 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:15,404 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:15,405 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385522581"}
+2013-11-30 22:28:15,406 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385522581'}
+2013-11-30 22:28:15,408 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:15,606 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:15,607 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385529781"}
+2013-11-30 22:28:15,607 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385529781'}
+2013-11-30 22:28:15,608 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:15,750 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:15,751 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385536981"}
+2013-11-30 22:28:15,752 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385536981'}
+2013-11-30 22:28:15,754 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:15,910 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:15,912 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385544181"}
+2013-11-30 22:28:15,912 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385544181'}
+2013-11-30 22:28:15,915 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:16,094 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:16,095 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385547782"}
+2013-11-30 22:28:16,096 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385547782'}
+2013-11-30 22:28:16,098 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:18,236 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:18,236 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385608981"}
+2013-11-30 22:28:18,237 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385608981'}
+2013-11-30 22:28:18,237 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:18,431 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:18,432 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385616181"}
+2013-11-30 22:28:18,433 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385616181'}
+2013-11-30 22:28:18,435 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:18,590 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:18,592 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385623381"}
+2013-11-30 22:28:18,592 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385623381'}
+2013-11-30 22:28:18,594 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:18,751 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:18,751 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385630581"}
+2013-11-30 22:28:18,751 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385630581'}
+2013-11-30 22:28:18,752 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:18,910 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:18,912 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385634181"}
+2013-11-30 22:28:18,912 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385634181'}
+2013-11-30 22:28:18,914 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:19,196 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:19,196 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385695381"}
+2013-11-30 22:28:19,196 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385695381'}
+2013-11-30 22:28:19,197 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:19,383 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:19,384 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385702581"}
+2013-11-30 22:28:19,385 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385702581'}
+2013-11-30 22:28:19,387 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:19,519 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:19,520 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385709781"}
+2013-11-30 22:28:19,520 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385709781'}
+2013-11-30 22:28:19,523 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:21,511 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:21,512 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385716981"}
+2013-11-30 22:28:21,513 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385716981'}
+2013-11-30 22:28:21,515 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:21,711 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:21,712 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385720581"}
+2013-11-30 22:28:21,712 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385720581'}
+2013-11-30 22:28:21,715 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:21,870 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:21,872 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385781782"}
+2013-11-30 22:28:21,872 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385781782'}
+2013-11-30 22:28:21,874 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:22,191 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:22,192 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385788981"}
+2013-11-30 22:28:22,192 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385788981'}
+2013-11-30 22:28:22,195 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:39,439 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:39,440 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385796181"}
+2013-11-30 22:28:39,441 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385796181'}
+2013-11-30 22:28:39,443 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:40,015 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:40,016 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385803381"}
+2013-11-30 22:28:40,017 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385803381'}
+2013-11-30 22:28:40,019 INFO views.parse2deal Line:76 1
+2013-11-30 22:28:40,198 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:40,200 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385806981"}
+2013-11-30 22:28:40,200 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385806981'}
+2013-11-30 22:28:47,321 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:47,321 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385806981"}
+2013-11-30 22:28:47,322 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385806981'}
+2013-11-30 22:28:48,902 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:28:48,904 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385806981"}
+2013-11-30 22:28:48,905 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385806981'}

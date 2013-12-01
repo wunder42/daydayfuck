@@ -4,6 +4,9 @@ from xml.dom import minidom
 import collections
 import time
 from hashlib import sha1
+import httplib, json
+
+from django.conf import settings
 
 
 def kv2element(key, value, doc):
@@ -203,3 +206,53 @@ class WxApplication(object):
 
     def post_process(self, rsp):
         pass
+
+class WxUser(object):
+
+    def __init__(self, openid):
+        self.openid = openid
+
+    def _parse(self):
+
+        conn = httplib.HTTPSConnection
+        # url = 
+
+# def get_access_token():
+#     appId, appSecret = settings.WX_APPID, settings.WX_SECRET
+#     conn = httplib.HTTPSConnection
+#     url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=%s&secret=%s' % (appId, appSecret)
+
+
+def get_access_token(**kwargs):
+    appId, appSecret = settings.WX_APPID, settings.WX_SECRET
+    url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=%s&secret=%s' % (appId, appSecret)
+
+    url = urlparse.urlparse(url)
+    if url.scheme == 'https':
+        conn = httplib.HTTPSConnection
+    elif url.scheme == 'http':
+        conn = httplib.HTTPConnection
+    
+    base_url = '%s://%s' % (url.scheme, url.hostname)
+    
+    headers = {
+        'User-Agent': 'dywx',
+        'Accept': 'application/json',
+    }
+    connection = conn(url.hostname)
+    method = kwargs.pop('method', 'GET').upper()
+    if method == 'GET':
+        path, query = url.path, ''
+        if url.query:
+            path += '?' + url.query
+    else:
+        path, query = url.path, url.query
+    connection.request(method, path, query, headers)
+    try:
+        response = json.loads(sconnection.getresponse())
+    except httplib.BadStatusLine, exc:
+        pass
+
+    logging.info(response)
+    return response.get('access_token', None)
+

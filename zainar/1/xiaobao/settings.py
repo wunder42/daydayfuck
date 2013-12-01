@@ -24,6 +24,7 @@ if 'SERVER_SOFTWARE' in os.environ:
             'PORT': const.MYSQL_PORT, 
         }
     }
+    DB_NAME = ''
 else:
     DATABASES = {
         'default': {
@@ -35,6 +36,14 @@ else:
             # 'PORT': '3306',                      
         }
     }
+    # CACHE_BACKEND = 'memcached://127.0.0.1:11211'
+    CACHES = {
+        'default': {
+            'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+            'LOCATION': '127.0.0.1:11211',
+        }
+    }
+    DB_NAME = 'daydayup'
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -173,3 +182,9 @@ INSTALLED_APPS = (
 
 logging.basicConfig(filename='zainar.log', level=logging.DEBUG,\
     format='%(asctime)s %(levelname)s %(module)s.%(funcName)s Line:%(lineno)d %(message)s')
+
+MONGO_HOST = '127.0.0.1'
+MONGO_PORT = '27017'
+
+WX_APPID = 'wx9cb4b766fdc23888'
+WX_APPSECRET = '981468ffda67f0f641e3291788ab19c4'
