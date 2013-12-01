@@ -225,3 +225,7 @@ TypeError: update_user() takes exactly 1 argument (2 given)
 2013-11-30 22:28:48,902 INFO views.parse2deal Line:53 parse2deal
 2013-11-30 22:28:48,904 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385806981"}
 2013-11-30 22:28:48,905 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385806981'}
+2013-11-30 22:45:14,899 INFO views.parse2deal Line:53 parse2deal
+2013-11-30 22:45:14,901 INFO views.parse2deal Line:56 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': 1385806981, u'_id': ObjectId('529ab34f5e53ae5275cd73a9')}
+2013-11-30 22:45:14,901 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385806981"}
+2013-11-30 22:45:14,902 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385806981'}
