@@ -24,7 +24,7 @@ if 'SERVER_SOFTWARE' in os.environ:
             'PORT': const.MYSQL_PORT, 
         }
     }
-    DB_NAME = ''
+    DB_NAME = 'ZrhAkcfDIPkefvdlMtuo'
 else:
     DATABASES = {
         'default': {

@@ -12,7 +12,11 @@ from django.conf import settings
 from official import WxRequest, WxTextResponse
 from utils import Weather, BaiduBus
 from models import Wxuser
+from parse import from_url
 
+'''
+BASIC SERVICE OF WX IN BAE
+'''
 
 if 'SERVER_SOFTWARE' in os.environ:
     from bae.api import logging
@@ -51,23 +55,23 @@ def index(request):
 
 def parse2deal(request):
     logging.info('parse2deal')
-    if not cache.get(request.FromUserName, None):
-        _item = db.t_user.find_one({'openid':request.FromUserName})
+    if not cache.get(str(request.FromUserName)):
+        _item = db.t_user.find_one({'openid':str(request.FromUserName)})
         logging.info(_item)
         if not _item:
-            user = Wxuser.create_user(request.FromUserName)
-            cache_value = '''{"openid":"%s", "jokeTimestamp":"%s"}''' % (request.FromUserName, -1)
-            cache.set(request.FromUserName, cache_value)
+            user = Wxuser.create_user(str(request.FromUserName))
+            cache_value = '''{"openid":"%s", "jokeTimestamp":"%s"}''' % (str(request.FromUserName), -1)
+            cache.set(str(request.FromUserName), cache_value)
         else:
-            cache_value = '''{"openid":"%s", "jokeTimestamp":"%s"}''' % (request.FromUserName, _item['jokeTimestamp'])
-            cache.set(request.FromUserName, cache_value)
-    logging.info(cache.get(request.FromUserName))
+            cache_value = '''{"openid":"%s", "jokeTimestamp":"%s"}''' % (str(request.FromUserName), _item['jokeTimestamp'])
+            cache.set(str(request.FromUserName), cache_value)
+    logging.info(cache.get(str(request.FromUserName)))
     if 'event' == request.MsgType and 'subscribe' == request.Event:
-		return HttpResponse(WxTextResponse(u'welcome daydayHappy family...', request).as_xml())
+		return HttpResponse(WxTextResponse(u'欢迎来到小刀不会飞大家庭......', request).as_xml())
     elif 'text' == request.MsgType:
-        _t = re.findall('xh|joke|笑话|xiaohua|haha|哈哈', request.Content)
+        _t = re.findall(u'xh|joke|笑话|xiaohua|haha|哈哈', request.Content)
         if len(_t) > 0:
-            _tmp = json.loads(cache.get(request.FromUserName))
+            _tmp = json.loads(cache.get(str(request.FromUserName)))
             logging.info(_tmp)
             _joke = int(_tmp.get('jokeTimestamp', -1))
             if 1:
@@ -79,22 +83,42 @@ def parse2deal(request):
 
                 Wxuser.update_user(_tmp['openid'], **{'jokeTimestamp':_timestamp})
                 cache_value = '''{"openid":"%s", "jokeTimestamp":"%s"}''' % (_tmp['openid'], _timestamp)
-                cache.set(_tmp['openid'], cache_value)
+                cache.set(str(_tmp['openid']), cache_value)
 
                 return HttpResponse(WxTextResponse(unicode(_content), request).as_xml())
-	return HttpResponse(WxTextResponse('error parse', request).as_xml())
+	return HttpResponse(WxTextResponse(u'不做死 不会死', request).as_xml())
 
 '''
-request deal
+DEFAULT MANAGER TOOLS
 '''
 
 def clear_cache(request):
+    '''bae cache no clear method'''
+
     cache.clear()
     return HttpResponse(json.dumps({'successful':True}), 'application/json')
 
+def update_jokes(request):
+    ''' update jokes from website **plain text** '''
+
+    parsed = from_url('http://feed.xiaohuayoumo.com/')
+    _item = [i for i in db.text_joke.find().sort('jokeTimestamp', pymongo.DESCENDING).limit(1)]
+    _gap = (_item[0]['jokeTimestamp'] if len(_item) else -1)
+    try:
+        for item in parsed.entries:
+            logging.info(item.title+int(time.mktime(time.strptime(str(item.pubDate), "%a, %d %b %Y %H:%M:%S -0500")))+item.description)
+            timestamp = int(time.mktime(time.strptime(str(item.pubDate), "%a, %d %b %Y %H:%M:%S -0500")))
+            if timestamp<_gap: continue
+            value = {'content':item.description, 'jokeTimestamp':timestamp}
+            db.text_joke.save(value)
+    except Exception as e:
+        logging.error(e)
+    return HttpResponse(json.dumps({'successful':True}), 'application/json')
+
 '''
-other service
+OTHER SERVICE IN BAE
 '''
+
 class RegisterView(TemplateView):
     template_name = 'wx-dy-base.html'
 

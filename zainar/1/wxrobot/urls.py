@@ -7,5 +7,6 @@ urlpatterns = patterns('',
 	url(r'^register/add/$', 'wxrobot.views.add_register'),
 
 	###########
-	url(r'^clear_cache/$', 'wxrobot.views.clear_cache')
+	url(r'^clear_cache/$', 'wxrobot.views.clear_cache'),
+	url(r'^update_jokes/$', 'wxrobot.views.update_jokes')
 )
