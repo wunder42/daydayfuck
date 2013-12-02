@@ -82,8 +82,15 @@ def parse2deal(request):
                 cache.set(_tmp['openid'], cache_value)
 
                 return HttpResponse(WxTextResponse(unicode(_content), request).as_xml())
-		# return HttpResponse(WxTextResponse(u'...', request).as_xml())
 	return HttpResponse(WxTextResponse('error parse', request).as_xml())
+
+'''
+request deal
+'''
+
+def clear_cache(request):
+    cache.clear()
+    return HttpResponse(json.dumps({'successful':True}), 'application/json')
 
 '''
 other service
