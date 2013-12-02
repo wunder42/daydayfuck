@@ -11,4 +11,17 @@ html
 			section#main
 				ul#todo-list
 			footer#footer
-				button#clear-completed Clear completed
+				section#connect
+					| Join list:
+					input#join-list-name
+					button#join Join
+					button#clear-completed Clear completed
+				section#disconnect.hidden
+					| Joined list: &nbsp
+					span#connect-list List name
+					button#leave Leave
+		script(src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
+		//- script(src="http://cdn.socket.io/stable/socket.io.js")
+		script(src="/socket.io/socket.io.js")
+		!= js('todo')
+
