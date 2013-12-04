@@ -69,7 +69,7 @@ def parse2deal(request):
     if 'event' == request.MsgType and 'subscribe' == request.Event:
 		return HttpResponse(WxTextResponse(u'欢迎来到小刀不会飞大家庭......', request).as_xml())
     elif 'text' == request.MsgType:
-        _t = re.findall(u'xh|joke|笑话|xiaohua|haha|哈哈', request.Content)
+        _t = re.findall(u'xh|joke|笑话|xiaohua|haha|哈哈', request.Content.lower())
         if len(_t) > 0:
             _tmp = json.loads(cache.get(str(request.FromUserName)))
             logging.info(_tmp)
@@ -86,6 +86,9 @@ def parse2deal(request):
                 cache.set(str(_tmp['openid']), cache_value)
 
                 return HttpResponse(WxTextResponse(unicode(_content), request).as_xml())
+        _t = re.findall(u'tq|温度|天气|weather|太阳', request.Content.lower())
+        # if len(_t) > 0:
+            # _location = cache.get()
 	return HttpResponse(WxTextResponse(u'不做死 不会死', request).as_xml())
 
 '''
@@ -114,6 +117,34 @@ def update_jokes(request):
     except Exception as e:
         logging.error(e)
     return HttpResponse(json.dumps({'successful':True}), 'application/json')
+
+def _register_weather(request):
+    '''
+    insert data about weather
+    '''
+    # return HttpResponse(db.t_weather.find({'sx':'广州'})[0]['py'])
+    city, _city = {}, {}
+    f = 'weather_city_id.txt'
+
+    with open(os.path.join(os.path.dirname(__file__), f), 'r') as k:
+        logging.info('weather')
+        for x in k.readlines():
+            _t = x.strip().split(',')
+            city[_t[1].strip().lower().replace(' ', '')] = _t[0].strip()
+
+    f = 'xxx.txt'
+    with open(os.path.join(os.path.dirname(__file__), f), 'r') as k:
+        for x in k.readlines():
+            _t = x.strip().split(' ')
+            _city[_t[1].strip().lower().replace(' ', '')] =  _t[0].strip()
+
+    for x in city:
+        k = _city.get(x, None)
+        db.t_weather.insert({'py':x, 'loction_code':city[x], 'hz':k})
+    
+    return HttpResponse(json.dumps({'successful-weather-count':len(city)}), 'application/json')
+
+
 
 '''
 OTHER SERVICE IN BAE

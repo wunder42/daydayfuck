@@ -229,3 +229,34 @@ TypeError: update_user() takes exactly 1 argument (2 given)
 2013-11-30 22:45:14,901 INFO views.parse2deal Line:56 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': 1385806981, u'_id': ObjectId('529ab34f5e53ae5275cd73a9')}
 2013-11-30 22:45:14,901 INFO views.parse2deal Line:64 {"openid":"oLXjgjiWeAS1gfe4ECchYewwoyTc", "jokeTimestamp":"1385806981"}
 2013-11-30 22:45:14,902 INFO views.parse2deal Line:71 {u'openid': u'oLXjgjiWeAS1gfe4ECchYewwoyTc', u'jokeTimestamp': u'1385806981'}
+2013-12-03 11:39:26,331 ERROR base.handle_uncaught_exception Line:215 Internal Server Error: /wx/update_weather/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/knife/dev/codehub/daydayfuck/zainar/1/wxrobot/views.py", line 125, in _register_weather
+    with open(f, 'r') as k:
+IOError: [Errno 2] No such file or directory: 'weather_city_id.txt'
+2013-12-03 11:41:11,879 ERROR base.handle_uncaught_exception Line:215 Internal Server Error: /wx/update_weather/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 298, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/knife/dev/codehub/daydayfuck/zainar/1/xiaobao/urls.py", line 12, in <module>
+    url(r'^wx/', include('wxrobot.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 24, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/knife/dev/codehub/daydayfuck/zainar/1/wxrobot/urls.py", line 2, in <module>
+    from views import RegisterView
+  File "/home/knife/dev/codehub/daydayfuck/zainar/1/wxrobot/views.py", line 141
+    return HttpResponse(json.dumps({'successful-weather-count':len(city))}), 'application/json')
+                                                                        ^
+SyntaxError: invalid syntax
