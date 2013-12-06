@@ -1,28 +1,36 @@
-import os, pymongo, logging
+import os, sys, logging
 
 from tornado.web import RequestHandler, Application
 from tornado.ioloop import IOLoop
-from tornado.options import default, parse_command_line, options
+from tornado.options import define, parse_command_line, options
+from handlers.handler import Login, Register, Logout, Home
 
 
 class IApplication(Application):
 
 	def __init__(self):
+
 		handlers = [
-			r('/',)
+			(r'/', Home),
+			(r'/login', Login),
+			(r'/logout', Logout),
+			(r'/register', Register)
 		]
+
 		settings = {
 			'cookie_secret': 'tfdsaljfdsalgtel',
 			'xsrc_cookies': True,
 			'login_url': '/login', 
 			'template_path': os.path.join(os.path.dirname(__file__), 'templates'),
+			'static_path': os.path.join(os.path.dirname(__file__), 'static'),
 			'debug': True
 		}
 
 		super(IApplication, self).__init__(handlers, **settings)
 
-options('port', default=8989, type=int)
-logging.basicConfig(ilename="userauth.log", format="%(asctime)s %(levelname)s %(module)s.%(funcName)s Line:%(lineno)d %(message)s", level=logging.DEBUG)
+define('port', default=8989, type=int)
+
+sys.path.append('./settings.py')
 
 parse_command_line()
 app = IApplication()

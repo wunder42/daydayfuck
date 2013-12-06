@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>upload everthing</title>
+</head>
+<body>
+	<form enctype="multipart/form-data">
+		{% module xsrf_form_html() %}
+		<input type="file" name="upload" id="uf" />
+		<input type="submit" name="submit" id="sm" />
+	</form>
+
+	<form action="/u" method="POST" enctype="multipart/form-data">
+		{% module xsrf_form_html() %}
+		<input type="file" name="uploads" />
+		<input type="submit" name="submit" />
+	</form>
+
+	<button id="ttt"> tttt </button>
+	<script type="text/javascript" src="static/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="static/js/ajaxuploadfile.js"></script>
+	<script type="text/javascript" src="static/base.js"></script>
+</body>
+</html>

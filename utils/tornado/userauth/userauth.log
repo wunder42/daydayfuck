@@ -1,0 +1,232 @@
+2013-12-06 02:57:52,571 INFO web.log_request Line:1635 304 GET /register (::1) 2.83ms
+2013-12-06 02:57:52,948 INFO web.log_request Line:1635 304 GET /static/ibase.css (::1) 3.09ms
+2013-12-06 02:57:52,954 INFO web.log_request Line:1635 304 GET /static/jquery-1.8.3.min.js (::1) 0.79ms
+2013-12-06 02:57:52,956 INFO web.log_request Line:1635 304 GET /static/base.js (::1) 0.41ms
+2013-12-06 02:57:58,444 INFO web.log_request Line:1635 200 POST /register (::1) 0.44ms
+2013-12-06 02:59:45,801 INFO autoreload._check_file Line:186 /home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/handlers/handler.py modified; restarting server
+2013-12-06 02:59:47,548 INFO web.log_request Line:1635 304 GET /register (::1) 2.89ms
+2013-12-06 02:59:47,902 INFO web.log_request Line:1635 304 GET /static/ibase.css (::1) 3.43ms
+2013-12-06 02:59:47,906 INFO web.log_request Line:1635 304 GET /static/jquery-1.8.3.min.js (::1) 0.78ms
+2013-12-06 02:59:47,910 INFO web.log_request Line:1635 304 GET /static/base.js (::1) 0.48ms
+2013-12-06 02:59:59,316 INFO web.log_request Line:1635 200 POST /register (::1) 0.50ms
+2013-12-06 03:01:03,978 INFO autoreload._check_file Line:186 /home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/handlers/handler.py modified; restarting server
+2013-12-06 03:01:06,178 INFO web.log_request Line:1635 304 GET /register (::1) 2.79ms
+2013-12-06 03:01:06,540 INFO web.log_request Line:1635 304 GET /static/ibase.css (::1) 3.51ms
+2013-12-06 03:01:06,546 INFO web.log_request Line:1635 304 GET /static/jquery-1.8.3.min.js (::1) 0.85ms
+2013-12-06 03:01:06,547 INFO web.log_request Line:1635 304 GET /static/base.js (::1) 0.37ms
+2013-12-06 03:01:11,659 INFO web.log_request Line:1635 200 POST /register (::1) 0.46ms
+2013-12-06 03:01:20,820 INFO web.log_request Line:1635 200 POST /register (::1) 0.42ms
+2013-12-06 03:01:25,003 INFO web.log_request Line:1635 200 POST /register (::1) 0.38ms
+2013-12-06 03:01:44,639 INFO autoreload._check_file Line:186 /home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/handlers/handler.py modified; restarting server
+2013-12-06 03:01:49,197 INFO web.log_request Line:1635 304 GET /register (::1) 3.92ms
+2013-12-06 03:01:49,592 INFO web.log_request Line:1635 304 GET /static/ibase.css (::1) 3.28ms
+2013-12-06 03:01:49,594 INFO web.log_request Line:1635 304 GET /static/jquery-1.8.3.min.js (::1) 0.74ms
+2013-12-06 03:01:49,595 INFO web.log_request Line:1635 304 GET /static/base.js (::1) 0.38ms
+2013-12-06 03:01:53,191 INFO web.log_request Line:1635 200 POST /register (::1) 0.49ms
+2013-12-06 03:02:08,304 INFO autoreload._check_file Line:186 /home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/handlers/handler.py modified; restarting server
+2013-12-06 03:02:09,796 INFO web.log_request Line:1635 304 GET /register (::1) 3.88ms
+2013-12-06 03:02:10,147 INFO web.log_request Line:1635 304 GET /static/ibase.css (::1) 3.31ms
+2013-12-06 03:02:10,153 INFO web.log_request Line:1635 304 GET /static/jquery-1.8.3.min.js (::1) 0.82ms
+2013-12-06 03:02:10,158 INFO web.log_request Line:1635 304 GET /static/base.js (::1) 0.50ms
+2013-12-06 03:02:13,629 INFO web.log_request Line:1635 200 POST /register (::1) 0.48ms
+2013-12-06 03:02:54,967 INFO autoreload._check_file Line:186 /home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/handlers/handler.py modified; restarting server
+2013-12-06 03:02:57,187 INFO web.log_request Line:1635 304 GET /register (::1) 2.85ms
+2013-12-06 03:02:57,560 INFO web.log_request Line:1635 304 GET /static/ibase.css (::1) 3.24ms
+2013-12-06 03:02:57,560 INFO web.log_request Line:1635 304 GET /static/base.js (::1) 0.42ms
+2013-12-06 03:02:57,561 INFO web.log_request Line:1635 304 GET /static/jquery-1.8.3.min.js (::1) 0.68ms
+2013-12-06 03:03:00,692 INFO web.log_request Line:1635 200 POST /register (::1) 0.43ms
+2013-12-06 03:03:32,679 INFO autoreload._check_file Line:186 /home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/handlers/handler.py modified; restarting server
+2013-12-06 03:03:36,406 INFO web.log_request Line:1635 304 GET /register (::1) 2.81ms
+2013-12-06 03:03:36,779 INFO web.log_request Line:1635 304 GET /static/ibase.css (::1) 3.28ms
+2013-12-06 03:03:36,780 INFO web.log_request Line:1635 304 GET /static/jquery-1.8.3.min.js (::1) 0.71ms
+2013-12-06 03:03:36,781 INFO web.log_request Line:1635 304 GET /static/base.js (::1) 0.55ms
+2013-12-06 03:03:39,884 INFO web.log_request Line:1635 200 POST /register (::1) 0.48ms
+2013-12-06 03:04:22,342 INFO autoreload._check_file Line:186 /home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/handlers/handler.py modified; restarting server
+2013-12-06 03:04:23,803 INFO web.log_request Line:1635 304 GET /register (::1) 2.85ms
+2013-12-06 03:04:24,171 INFO web.log_request Line:1635 304 GET /static/ibase.css (::1) 3.07ms
+2013-12-06 03:04:24,176 INFO web.log_request Line:1635 304 GET /static/jquery-1.8.3.min.js (::1) 0.77ms
+2013-12-06 03:04:24,178 INFO web.log_request Line:1635 304 GET /static/base.js (::1) 0.46ms
+2013-12-06 03:04:26,924 INFO web.log_request Line:1635 200 POST /register (::1) 0.47ms
+2013-12-06 03:05:04,501 INFO autoreload._check_file Line:186 /home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/handlers/handler.py modified; restarting server
+2013-12-06 03:05:10,663 INFO autoreload._check_file Line:186 /home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/handlers/handler.py modified; restarting server
+2013-12-06 03:05:17,321 INFO autoreload._check_file Line:186 /home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/handlers/handler.py modified; restarting server
+2013-12-06 03:05:28,254 INFO web.log_request Line:1635 200 GET /register (::1) 2.98ms
+2013-12-06 03:05:28,623 INFO web.log_request Line:1635 304 GET /static/ibase.css (::1) 3.16ms
+2013-12-06 03:05:28,626 INFO web.log_request Line:1635 304 GET /static/jquery-1.8.3.min.js (::1) 0.79ms
+2013-12-06 03:05:28,627 INFO web.log_request Line:1635 304 GET /static/base.js (::1) 0.39ms
+2013-12-06 03:05:32,947 ERROR web.log_exception Line:1228 Uncaught exception POST /register (::1)
+HTTPRequest(protocol='http', host='localhost:8989', method='POST', uri='/register', version='HTTP/1.1', remote_ip='::1', headers={'Origin': 'http://localhost:8989', 'Content-Length': '68', 'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip,deflate,sdch', 'Host': 'localhost:8989', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.114 Safari/537.36', 'Connection': 'keep-alive', 'X-Requested-With': 'XMLHttpRequest', 'Referer': 'http://localhost:8989/register', 'Cookie': '_xsrf=5a11403eb60c4fcab6ed0ddcfa412c6e', 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1141, in _when_complete
+    callback()
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1162, in _execute_method
+    self._when_complete(method(*self.path_args, **self.path_kwargs),
+  File "/home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/handlers/handler.py", line 62, in post
+    logging.info('user insert: %s' % user)
+TypeError: __str__ returned non-string (type dict)
+2013-12-06 03:05:32,948 ERROR web.log_request Line:1635 500 POST /register (::1) 1.38ms
+2013-12-06 03:06:29,985 INFO autoreload._check_file Line:186 /home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/handlers/handler.py modified; restarting server
+2013-12-06 03:06:36,367 INFO web.log_request Line:1635 304 GET /register (::1) 2.71ms
+2013-12-06 03:06:36,731 INFO web.log_request Line:1635 304 GET /static/ibase.css (::1) 3.18ms
+2013-12-06 03:06:36,734 INFO web.log_request Line:1635 304 GET /static/jquery-1.8.3.min.js (::1) 0.73ms
+2013-12-06 03:06:36,739 INFO web.log_request Line:1635 304 GET /static/base.js (::1) 0.53ms
+2013-12-06 03:06:39,489 INFO web.log_request Line:1635 200 POST /register (::1) 0.47ms
+2013-12-06 03:06:51,758 ERROR web.log_exception Line:1228 Uncaught exception POST /register (::1)
+HTTPRequest(protocol='http', host='localhost:8989', method='POST', uri='/register', version='HTTP/1.1', remote_ip='::1', headers={'Origin': 'http://localhost:8989', 'Content-Length': '69', 'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip,deflate,sdch', 'Host': 'localhost:8989', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.114 Safari/537.36', 'Connection': 'keep-alive', 'X-Requested-With': 'XMLHttpRequest', 'Referer': 'http://localhost:8989/register', 'Cookie': '_xsrf=5a11403eb60c4fcab6ed0ddcfa412c6e', 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1141, in _when_complete
+    callback()
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1162, in _execute_method
+    self._when_complete(method(*self.path_args, **self.path_kwargs),
+  File "/home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/handlers/handler.py", line 62, in post
+    logging.info('user insert: %s' % str(user))
+TypeError: __str__ returned non-string (type dict)
+2013-12-06 03:06:51,759 ERROR web.log_request Line:1635 500 POST /register (::1) 1.92ms
+2013-12-06 03:07:24,644 INFO autoreload._check_file Line:186 /home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/handlers/handler.py modified; restarting server
+2013-12-06 03:07:27,359 INFO web.log_request Line:1635 304 GET /register (::1) 2.97ms
+2013-12-06 03:07:27,699 INFO web.log_request Line:1635 304 GET /static/ibase.css (::1) 3.32ms
+2013-12-06 03:07:27,705 INFO web.log_request Line:1635 304 GET /static/jquery-1.8.3.min.js (::1) 0.80ms
+2013-12-06 03:07:27,706 INFO web.log_request Line:1635 304 GET /static/base.js (::1) 0.39ms
+2013-12-06 03:07:30,415 ERROR web.log_exception Line:1228 Uncaught exception POST /register (::1)
+HTTPRequest(protocol='http', host='localhost:8989', method='POST', uri='/register', version='HTTP/1.1', remote_ip='::1', headers={'Origin': 'http://localhost:8989', 'Content-Length': '71', 'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip,deflate,sdch', 'Host': 'localhost:8989', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.114 Safari/537.36', 'Connection': 'keep-alive', 'X-Requested-With': 'XMLHttpRequest', 'Referer': 'http://localhost:8989/register', 'Cookie': '_xsrf=5a11403eb60c4fcab6ed0ddcfa412c6e', 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1141, in _when_complete
+    callback()
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1162, in _execute_method
+    self._when_complete(method(*self.path_args, **self.path_kwargs),
+  File "/home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/handlers/handler.py", line 63, in post
+    mongodb.user.insert(user)
+NameError: global name 'mongodb' is not defined
+2013-12-06 03:07:30,416 ERROR web.log_request Line:1635 500 POST /register (::1) 1.90ms
+2013-12-06 03:07:52,802 INFO autoreload._check_file Line:186 /home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/handlers/handler.py modified; restarting server
+2013-12-06 03:08:11,006 INFO autoreload._check_file Line:186 /home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/handlers/handler.py modified; restarting server
+2013-12-06 03:08:12,683 INFO web.log_request Line:1635 304 GET /register (::1) 2.96ms
+2013-12-06 03:08:13,028 INFO web.log_request Line:1635 304 GET /static/ibase.css (::1) 3.06ms
+2013-12-06 03:08:13,034 INFO web.log_request Line:1635 304 GET /static/jquery-1.8.3.min.js (::1) 0.78ms
+2013-12-06 03:08:13,036 INFO web.log_request Line:1635 304 GET /static/base.js (::1) 0.38ms
+2013-12-06 03:08:17,264 ERROR web.log_exception Line:1228 Uncaught exception POST /register (::1)
+HTTPRequest(protocol='http', host='localhost:8989', method='POST', uri='/register', version='HTTP/1.1', remote_ip='::1', headers={'Origin': 'http://localhost:8989', 'Content-Length': '67', 'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip,deflate,sdch', 'Host': 'localhost:8989', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.114 Safari/537.36', 'Connection': 'keep-alive', 'X-Requested-With': 'XMLHttpRequest', 'Referer': 'http://localhost:8989/register', 'Cookie': '_xsrf=5a11403eb60c4fcab6ed0ddcfa412c6e', 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1141, in _when_complete
+    callback()
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1162, in _execute_method
+    self._when_complete(method(*self.path_args, **self.path_kwargs),
+  File "/home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/handlers/handler.py", line 63, in post
+    settings.mongodb.user.insert(user)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 356, in insert
+    docs = [self.__database._fix_incoming(doc, self) for doc in docs]
+TypeError: 'User' object is not iterable
+2013-12-06 03:08:17,283 ERROR web.log_request Line:1635 500 POST /register (::1) 19.98ms
+2013-12-06 03:09:32,172 INFO autoreload._check_file Line:186 /home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/models.py modified; restarting server
+2013-12-06 03:09:44,833 INFO autoreload._check_file Line:186 /home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/models.py modified; restarting server
+2013-12-06 03:09:55,005 INFO autoreload._check_file Line:186 /home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/models.py modified; restarting server
+2013-12-06 03:10:44,167 INFO autoreload._check_file Line:186 /home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/models.py modified; restarting server
+2013-12-06 03:12:11,116 INFO web.log_request Line:1635 304 GET /register (::1) 3.72ms
+2013-12-06 03:12:11,451 INFO web.log_request Line:1635 304 GET /static/ibase.css (::1) 3.68ms
+2013-12-06 03:12:11,455 INFO web.log_request Line:1635 304 GET /static/jquery-1.8.3.min.js (::1) 0.92ms
+2013-12-06 03:12:11,457 INFO web.log_request Line:1635 304 GET /static/base.js (::1) 0.40ms
+2013-12-06 03:12:15,542 INFO handler.post Line:62 {"username": "xx", "password": "fdsagdsa"}
+2013-12-06 03:12:15,542 ERROR web.log_exception Line:1228 Uncaught exception POST /register (::1)
+HTTPRequest(protocol='http', host='localhost:8989', method='POST', uri='/register', version='HTTP/1.1', remote_ip='::1', headers={'Origin': 'http://localhost:8989', 'Content-Length': '68', 'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip,deflate,sdch', 'Host': 'localhost:8989', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.114 Safari/537.36', 'Connection': 'keep-alive', 'X-Requested-With': 'XMLHttpRequest', 'Referer': 'http://localhost:8989/register', 'Cookie': '_xsrf=5a11403eb60c4fcab6ed0ddcfa412c6e', 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1141, in _when_complete
+    callback()
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1162, in _execute_method
+    self._when_complete(method(*self.path_args, **self.path_kwargs),
+  File "/home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/handlers/handler.py", line 63, in post
+    settings.mongodb.user.insert(user)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 356, in insert
+    docs = [self.__database._fix_incoming(doc, self) for doc in docs]
+TypeError: 'User' object is not iterable
+2013-12-06 03:12:15,544 ERROR web.log_request Line:1635 500 POST /register (::1) 1.98ms
+2013-12-06 03:14:28,756 INFO autoreload._check_file Line:186 /home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/models.py modified; restarting server
+2013-12-06 03:14:56,814 INFO web.log_request Line:1635 304 GET /register (::1) 2.71ms
+2013-12-06 03:14:57,162 INFO web.log_request Line:1635 304 GET /static/ibase.css (::1) 3.42ms
+2013-12-06 03:14:57,163 INFO web.log_request Line:1635 304 GET /static/jquery-1.8.3.min.js (::1) 0.71ms
+2013-12-06 03:14:57,167 INFO web.log_request Line:1635 304 GET /static/base.js (::1) 0.52ms
+2013-12-06 03:15:01,831 INFO handler.post Line:62 "{"username": "xsf", "password": "fdsagf"}"
+2013-12-06 03:15:01,831 ERROR web.log_exception Line:1228 Uncaught exception POST /register (::1)
+HTTPRequest(protocol='http', host='localhost:8989', method='POST', uri='/register', version='HTTP/1.1', remote_ip='::1', headers={'Origin': 'http://localhost:8989', 'Content-Length': '67', 'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip,deflate,sdch', 'Host': 'localhost:8989', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.114 Safari/537.36', 'Connection': 'keep-alive', 'X-Requested-With': 'XMLHttpRequest', 'Referer': 'http://localhost:8989/register', 'Cookie': '_xsrf=5a11403eb60c4fcab6ed0ddcfa412c6e', 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1141, in _when_complete
+    callback()
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1162, in _execute_method
+    self._when_complete(method(*self.path_args, **self.path_kwargs),
+  File "/home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/handlers/handler.py", line 63, in post
+    settings.mongodb.user.insert(user)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 356, in insert
+    docs = [self.__database._fix_incoming(doc, self) for doc in docs]
+TypeError: 'User' object is not iterable
+2013-12-06 03:15:01,832 ERROR web.log_request Line:1635 500 POST /register (::1) 1.96ms
+2013-12-06 03:16:12,990 INFO autoreload._check_file Line:186 /home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/models.py modified; restarting server
+2013-12-06 03:16:40,151 INFO autoreload._check_file Line:186 /home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/handlers/handler.py modified; restarting server
+2013-12-06 03:16:42,313 INFO autoreload._check_file Line:186 /home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/handlers/handler.py modified; restarting server
+2013-12-06 03:16:43,003 INFO web.log_request Line:1635 304 GET /register (::1) 2.76ms
+2013-12-06 03:16:43,410 INFO web.log_request Line:1635 304 GET /static/ibase.css (::1) 3.43ms
+2013-12-06 03:16:43,418 INFO web.log_request Line:1635 304 GET /static/jquery-1.8.3.min.js (::1) 0.80ms
+2013-12-06 03:16:43,420 INFO web.log_request Line:1635 304 GET /static/base.js (::1) 0.40ms
+2013-12-06 03:16:49,361 INFO handler.post Line:62 {"username": "xsfd", "password": "sgewreq"}
+2013-12-06 03:16:49,361 ERROR web.log_exception Line:1228 Uncaught exception POST /register (::1)
+HTTPRequest(protocol='http', host='localhost:8989', method='POST', uri='/register', version='HTTP/1.1', remote_ip='::1', headers={'Origin': 'http://localhost:8989', 'Content-Length': '69', 'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip,deflate,sdch', 'Host': 'localhost:8989', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.114 Safari/537.36', 'Connection': 'keep-alive', 'X-Requested-With': 'XMLHttpRequest', 'Referer': 'http://localhost:8989/register', 'Cookie': '_xsrf=5a11403eb60c4fcab6ed0ddcfa412c6e', 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1141, in _when_complete
+    callback()
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1162, in _execute_method
+    self._when_complete(method(*self.path_args, **self.path_kwargs),
+  File "/home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/handlers/handler.py", line 63, in post
+    settings.mongodb.user.insert(str(user))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 356, in insert
+    docs = [self.__database._fix_incoming(doc, self) for doc in docs]
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/database.py", line 254, in _fix_incoming
+    son = manipulator.transform_incoming(son, collection)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/son_manipulator.py", line 73, in transform_incoming
+    son["_id"] = ObjectId()
+TypeError: 'str' object does not support item assignment
+2013-12-06 03:16:49,384 ERROR web.log_request Line:1635 500 POST /register (::1) 23.31ms
+2013-12-06 03:18:08,477 INFO autoreload._check_file Line:186 /home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/models.py modified; restarting server
+2013-12-06 03:18:16,140 INFO autoreload._check_file Line:186 /home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/models.py modified; restarting server
+2013-12-06 03:18:32,800 INFO autoreload._check_file Line:186 /home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/handlers/handler.py modified; restarting server
+2013-12-06 03:18:36,956 INFO autoreload._check_file Line:186 /home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/handlers/handler.py modified; restarting server
+2013-12-06 03:18:39,252 INFO web.log_request Line:1635 304 GET /register (::1) 2.98ms
+2013-12-06 03:18:39,625 INFO web.log_request Line:1635 304 GET /static/ibase.css (::1) 3.21ms
+2013-12-06 03:18:39,628 INFO web.log_request Line:1635 304 GET /static/jquery-1.8.3.min.js (::1) 0.75ms
+2013-12-06 03:18:39,629 INFO web.log_request Line:1635 304 GET /static/base.js (::1) 0.38ms
+2013-12-06 03:18:43,735 INFO web.log_request Line:1635 200 POST /register (::1) 0.72ms
+2013-12-06 03:18:43,751 INFO web.log_request Line:1635 200 GET /login (::1) 0.83ms
+2013-12-06 03:19:19,289 INFO web.log_request Line:1635 200 POST /register (::1) 0.61ms
+2013-12-06 03:19:19,296 INFO web.log_request Line:1635 304 GET /login (::1) 0.97ms
+2013-12-06 03:19:25,221 ERROR web.log_exception Line:1228 Uncaught exception POST /login (::1)
+HTTPRequest(protocol='http', host='localhost:8989', method='POST', uri='/login', version='HTTP/1.1', remote_ip='::1', headers={'Origin': 'http://localhost:8989', 'Content-Length': '67', 'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip,deflate,sdch', 'Host': 'localhost:8989', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.114 Safari/537.36', 'Connection': 'keep-alive', 'X-Requested-With': 'XMLHttpRequest', 'Referer': 'http://localhost:8989/login', 'Cookie': '_xsrf=5a11403eb60c4fcab6ed0ddcfa412c6e', 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1141, in _when_complete
+    callback()
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1162, in _execute_method
+    self._when_complete(method(*self.path_args, **self.path_kwargs),
+  File "/home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/handlers/handler.py", line 31, in post
+    if not self.isValid(username, password): return self.write(json.dumps({'successful':False}))
+  File "/home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/handlers/handler.py", line 39, in isValid
+    _t = settings.mongodb.user.find_one(user)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 604, in find_one
+    for result in self.find(spec_or_id, *args, **kwargs).limit(-1):
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 904, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 848, in _refresh
+    self.__uuid_subtype))
+InvalidDocument: Cannot encode object: <models.User object at 0xa62cc2c>
+2013-12-06 03:19:25,222 ERROR web.log_request Line:1635 500 POST /login (::1) 18.40ms
+2013-12-06 03:19:57,613 INFO autoreload._check_file Line:186 /home/knife/dev/codehub/daydayfuck/utils/tornado/userauth/handlers/handler.py modified; restarting server
+2013-12-06 03:19:59,646 INFO web.log_request Line:1635 304 GET /login (::1) 2.79ms
+2013-12-06 03:20:00,034 INFO web.log_request Line:1635 304 GET /static/ibase.css (::1) 3.14ms
+2013-12-06 03:20:00,035 INFO web.log_request Line:1635 304 GET /static/base.js (::1) 0.43ms
+2013-12-06 03:20:00,036 INFO web.log_request Line:1635 304 GET /static/jquery-1.8.3.min.js (::1) 0.65ms
+2013-12-06 03:20:05,554 INFO handler.isValid Line:40 {u'username': u'qqq', u'password': u'123456', u'_id': ObjectId('52a0d1b75e53ae4c5cc46dac')}
+2013-12-06 03:20:05,554 INFO handler.post Line:32 login valid
+2013-12-06 03:20:05,568 INFO web.log_request Line:1635 200 POST /login (::1) 28.74ms
+2013-12-06 03:20:05,584 INFO web.log_request Line:1635 200 GET / (::1) 0.49ms
+2013-12-06 03:20:19,828 INFO web.log_request Line:1635 302 GET /logout (::1) 0.52ms
+2013-12-06 03:20:19,837 INFO web.log_request Line:1635 304 GET /login (::1) 0.90ms
+2013-12-06 03:20:25,618 INFO web.log_request Line:1635 200 POST /login (::1) 0.37ms
+2013-12-06 03:20:31,361 INFO handler.isValid Line:40 {u'username': u'qqq', u'password': u'123456', u'_id': ObjectId('52a0d1b75e53ae4c5cc46dac')}
+2013-12-06 03:20:31,361 INFO handler.post Line:32 login valid
+2013-12-06 03:20:31,362 INFO web.log_request Line:1635 200 POST /login (::1) 1.21ms
+2013-12-06 03:20:31,371 INFO web.log_request Line:1635 304 GET / (::1) 0.47ms
