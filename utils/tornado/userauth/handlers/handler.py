@@ -1,15 +1,15 @@
-import pymongo, json, logging
+import pymongo, json, logging, time
 
 from tornado.web import RequestHandler, authenticated
 from models import User
+from session import manager, Session
 import settings
-
-# logging.basicConfig(filename="userauth.log", format="%(asctime)s %(levelname)s %(module)s.%(funcName)s Line:%(lineno)d %(message)s", level=logging.DEBUG)
 
 class BaseHandler(RequestHandler):
 
 	def get_current_user(self):
-		return self.get_secure_cookie('userid')
+		_t = manager.getSession(self.get_secure_cookie('userid'))
+		return _t.userName if _t and _t.expireTime > int(time.time()) else None
 
 	def update_session(self):
 		pass
@@ -30,7 +30,13 @@ class Login(BaseHandler):
 		username, password = self.get_argument('username', ''), self.get_argument('password', '')
 		if not self.isValid(username, password): return self.write(json.dumps({'successful':False}))
 		logging.info('login valid')
-		self.set_secure_cookie('userid', username)
+
+		manager.delSession(self.get_secure_cookie('userid'))
+
+		sess = Session(username)
+		manager.addSession(sess)
+
+		self.set_secure_cookie('userid', sess.sessionId)
 		self.write(json.dumps({'successful':True}))
 
 	def isValid(self, username, password):
@@ -45,14 +51,15 @@ class Logout(BaseHandler):
 
 	@authenticated
 	def get(self):
+		manager.delSession(self.get_secure_cookie('userid'))
 		self.clear_cookie('userid')
 		self.redirect('/login')
 
 class Register(BaseHandler):
 
 	def get(self):
-		userid = self.get_current_user()
-		self.redirect('/') if userid else self.render('iregister.html')
+		username = self.get_current_user()
+		self.redirect('/') if username else self.render('iregister.html')
 
 	def post(self):
 		username, password = self.get_argument('username', ''), self.get_argument('password', '')
