@@ -222,8 +222,8 @@ def create_cli_parser():
     
     return cli_parser
 
-def main(argv):
-    argv = [argv,]
+def queryWeather(locationId):
+    argv = [locationId,]
     # Create the command line parser.
     cli_parser = create_cli_parser()
     

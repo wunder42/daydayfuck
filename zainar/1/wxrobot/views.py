@@ -13,6 +13,7 @@ from official import WxRequest, WxTextResponse
 from utils import Weather, BaiduBus
 from models import Wxuser
 from parse import from_url
+import weather
 
 '''
 BASIC SERVICE OF WX IN BAE
@@ -66,12 +67,13 @@ def parse2deal(request):
             cache_value = '''{"openid":"%s", "jokeTimestamp":"%s"}''' % (str(request.FromUserName), _item['jokeTimestamp'])
             cache.set(str(request.FromUserName), cache_value)
     logging.info(cache.get(str(request.FromUserName)))
+    _iii = json.loads(cache.get(str(request.FromUserName)))
     if 'event' == request.MsgType and 'subscribe' == request.Event:
 		return HttpResponse(WxTextResponse(u'欢迎来到小刀不会飞大家庭......', request).as_xml())
     elif 'text' == request.MsgType:
         _t = re.findall(u'xh|joke|笑话|xiaohua|haha|哈哈', request.Content.lower())
         if len(_t) > 0:
-            _tmp = json.loads(cache.get(str(request.FromUserName)))
+            _tmp = _iii #json.loads(cache.get(str(request.FromUserName)))
             logging.info(_tmp)
             _joke = int(_tmp.get('jokeTimestamp', -1))
             if 1:
@@ -87,8 +89,22 @@ def parse2deal(request):
 
                 return HttpResponse(WxTextResponse(unicode(_content), request).as_xml())
         _t = re.findall(u'tq|温度|天气|weather|太阳', request.Content.lower())
-        # if len(_t) > 0:
-            # _location = cache.get()
+        if len(_t) > 0:
+            _location = _iii.get('location', None)
+            if not _location: _loction =  db.t_user.find_one({'openid':_iii.get('openid')}).get('lcoation', None)
+            logging.info('query weather, location id' + _location)
+            if _location:
+                _iii['location'] = _location
+                cache.set(_iii.get('openid'), json.dumps(_iii))
+                return HttpResponse(WxTextResponse(unicode(weather.queryWeather(_location)), request).as_xml())
+            else:
+                _iii['state'] = 'tq'
+                cache.set(_iii.get('openid'), json.dumps(_iii))
+                db.t_user.update({'openid':_iii.get('openid')}, {'$set':{'state':'tq'}})
+                return HttpResponse(WxTextResponse(unicode('input city'), request).as_xml())
+        ### cityid ###
+        _t = re.findall(u'', request.Content.lower())
+
 	return HttpResponse(WxTextResponse(u'不做死 不会死', request).as_xml())
 
 '''
@@ -122,7 +138,6 @@ def _register_weather(request):
     '''
     insert data about weather
     '''
-    # return HttpResponse(db.t_weather.find({'sx':'广州'})[0]['py'])
     city, _city = {}, {}
     f = 'weather_city_id.txt'
 
