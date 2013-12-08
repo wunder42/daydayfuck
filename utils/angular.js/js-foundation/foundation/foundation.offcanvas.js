@@ -1,6 +1,6 @@
 ;(function ($, window, document, undefined) {
   'use strict';
-
+  console.log('in offov')
   Foundation.libs.offcanvas = {
     name : 'offcanvas',
 
@@ -16,6 +16,7 @@
       $(this.scope).off('.offcanvas')
         .on('click.fndtn.offcanvas', '.left-off-canvas-toggle', function (e) {
           e.preventDefault();
+          console.log('fux')
           $(this).closest('.off-canvas-wrap').toggleClass('move-right');
         })
         .on('click.fndtn.offcanvas', '.exit-off-canvas', function (e) {

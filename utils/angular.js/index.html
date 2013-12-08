@@ -1,33 +1,33 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="profile">
 <head>
 	<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>littleknife's zoon</title>
     <link rel="stylesheet" href="css-foundation/foundation.css" />
-    <link rel="stylesheet" href="css-foundation/style.css" />
+    <link rel="stylesheet/less" href="css-foundation/style.less" />
     <script src="js-foundation/modernizr.js"></script>
+    <script src="js-foundation/less-1.5.0.min.js"></script>
 </head>
 <body>
 	<div class="row main">
 		<div class="large-2 columns sidebar">
 			<h5>LittleKnife</h5>
 			<ul class="side-nav">
-			  <li class="active"><a href="#"></a></li>
-			  <li><a href="#">Music</a></li>
+			  <li><a href="#/music">Music</a></li>
 			  <li class="divider"></li>
-			  <li><a href="#">Movie</a></li>
+			  <li><a href="#/movie">Movie</a></li>
 			  <li class="divider"></li>
-			  <li><a href="#">Notebook</a></li>
-			  <li class="divider"></li>
-			  <li><a href="#">Profile</a></li>
+			  <li><a href="#/profile">Profile</a></li>
 			</ul>
 		</div>
-		<div class="large-10 columns">
+		<div class="large-10 columns content">
 			<div ng-view></div>
 		</div>
 	</div>
 	<script src="js-foundation/jquery.js"></script>
     <script src="js-foundation/foundation.min.js"></script>
+    <script src="js-foundation/angular.js"></script>
+    <script src="js-foundation/littleknife.js"></script>
 </body>
 </html>
