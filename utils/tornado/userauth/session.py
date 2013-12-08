@@ -44,7 +44,7 @@ class SessionManager(object):
 		settings.mongodb.sessions.remove({'sessionId':sessionId})
 
 	def onlineNum(self):
-		return len(sessions)
+		return len(self.sessions)
 
 	def findSession(self, sess):
 		_t = settings.mongodb.sessions.find_one(sess.toMongoDB())

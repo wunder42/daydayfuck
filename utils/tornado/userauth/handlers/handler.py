@@ -1,5 +1,6 @@
 import pymongo, json, logging, time
 
+import tornado.websocket
 from tornado.web import RequestHandler, authenticated
 from models import User
 from session import manager, Session
@@ -14,11 +15,15 @@ class BaseHandler(RequestHandler):
 	def update_session(self):
 		pass
 
+	def onlineNum(self):
+		return manager.onlineNum()
+
 class Home(BaseHandler):
 
 	@authenticated
 	def get(self):
-		self.write(json.dumps({'login':True, 'username':self.get_current_user()}))
+		# self.write(json.dumps({'login':True, 'username':self.get_current_user(), 'onlineNum': self.onlineNum()}))
+		self.render('userauth.html', username=self.get_current_user(), onlineNum=self.onlineNum())
 
 class Login(BaseHandler):
 
@@ -71,4 +76,34 @@ class Register(BaseHandler):
 
 	def isValid(self, username, password):
 		return username and len(password) > 5
+
+class EchoHandler(tornado.websocket.WebSocketHandler):
+
+	waiters = set()
+
+	def open(self):
+		logging.info('add ...')
+		msg = json.dumps({'type':1, 'addNum':1, 'verbose':'online num + 1'})
+		EchoHandler.sendUpdate(msg)
+		EchoHandler.waiters.add(self)
+
+	def on_message(self, message):
+		logging.info('got message %r', message)
+		message = json.loads(message)
+		# self.write_message(json.dumps({'type':'1', 'addNum':1}))
+		EchoHandler.sendUpdate({'type':2, 'msg':'daydayfuck'})
+
+	def on_close(self):
+		logging.info('remove ...')
+		EchoHandler.waiters.remove(self)
+		msg = json.dumps({'type':1, 'addNum':-1, 'verbose':'online num + 1'})
+		EchoHandler.sendUpdate(msg)
+		
+	@classmethod
+	def sendUpdate(cls, msg):
+		for waiter in cls.waiters:
+			try:
+				waiter.write_message(msg)
+			except:
+				logging.error('Error sending msg')
 
