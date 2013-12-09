@@ -16,7 +16,32 @@
     });
     /* init min-height*/
 
-    return $(".content-main").css('height', $(window).height() - $(".tab-bar").height());
+    $(".content-main").css('height', $(window).height() - $(".tab-bar").height());
+    /* deal with drag action*/
+
+    return $(".item").mousedown(function(e) {
+      var a, b, t, x, y;
+      t = $(this);
+      $(this).css({
+        position: 'absolute',
+        cursor: "pointer",
+        "-webkit-transform": "rotate(10deg)"
+      });
+      x = event.pageX;
+      y = event.pageY;
+      a = $(this).offset().top;
+      b = $(this).offset().left;
+      console.log('mousedown', x, y, a, b, t);
+      if (e.which === 1) {
+        return $("html").mousemove(function(e) {
+          console.log(e.pageX, e.pageY);
+          t.css('top', e.pageY - y + a);
+          return t.css('left', e.pageX - x + b);
+        });
+      }
+    }).mouseup(function(e) {
+      return $("html").unbind('mousemove');
+    });
   });
 
 }).call(this);

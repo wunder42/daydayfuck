@@ -6,9 +6,12 @@
     	<link href="" rel="stylesheet">
         <style type="text/css">
             .idrag {
-                position: absolute;
+                /*position: absolute;*/
                 border: 1px solid gray;
                 top:0;left:0;
+                height:30px;
+                width:90px;
+                background-color: gray;
             }
         </style>
     </head>
@@ -22,10 +25,12 @@
         <script type="text/javascript">
             $(function() {                          
                 $("span").bind("mousedown", function(event){
+                    $(this).css({"-webkit-transform":"rotate(10deg)", "cursor": "pointer", "position":"absolute"})
                     // alert(event.which.toString())
                     var $x = event.pageX; var $a = $("span").offset().top;
                     var $y = event.pageY; var $b = $("span").offset().left;
                     // alert($a)
+                    
                     if (event.which == 1) {
                         $('html').mousemove(function(e){
                             $("span").text(e.pageX.toString()+','+e.pageY.toString());
@@ -36,6 +41,7 @@
                     
                 }).bind("mouseup", function(e){
                     // alert('xx');
+                    $(this).css({"-webkit-transform":"rotate(0deg)", "cursor": "text"})
                     $("html").unbind("mousemove");
                 });
                 // $("span").text(2);
