@@ -16,6 +16,7 @@
       };
     },
     showMessage: function(msg) {
+      var _from, _h;
       console.log(msg);
       if (msg.type === 1) {
         console.log('1');
@@ -23,6 +24,11 @@
       } else if (msg.type === 2) {
         console.log('2');
         return $(".sysinfo").text(msg.msg);
+      } else if (msg.type === 3) {
+        console.log('3');
+        _from = msg.from === $(".username").text() ? 'me' : msg.from;
+        _h = "<div class='alert-box info'>" + msg.content + "-->" + _from + "</div>";
+        return $(".msghub").prepend(_h);
       }
     }
   };
@@ -34,7 +40,25 @@
         type: 1
       }));
     });
-    return updater.start();
+    updater.start();
+    $(".close").click(function(e) {
+      e.preventDefault();
+      return $(this).parent("div").hide("slow");
+    });
+    return $(".tozoom").click(function(e) {
+      var _t;
+      console.log('send');
+      _t = $(".cc").val();
+      if (!_t) {
+        alert('send error');
+        $(".cc").value("");
+        return;
+      }
+      return updater.socket.send(JSON.stringify({
+        content: _t,
+        'userid': $.cookie("userid")
+      }));
+    });
   });
 
 }).call(this);

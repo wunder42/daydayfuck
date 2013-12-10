@@ -1,0 +1,69 @@
+<!doctype html>
+<html ng-app="social">
+<head>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>littleknife's social network project</title>
+    <link rel="stylesheet" href="/static/css-foundation/foundation.css" />
+    <link rel="stylesheet" href="/static/css-foundation/normalize.css" />
+    <link rel="stylesheet" href="/static/css/bootstrap.css" />
+    <link rel="stylesheet" href="/static/css-foundation/style.less" />
+    <script src="/static/js-foundation/modernizr.js"></script>
+    <script src="/static/js-foundation/less-1.5.0.min.js"></script>
+</head>
+<body>
+	<div class="social-main">
+		<div class="off-canvas-wrap">
+			<div class="inner-wrap">
+				<nav class="tab-bar">
+					<section class="left-small">
+						<a class="left-off-canvas-toggle menu-icon">
+							<span></span>
+						</a>
+					</section>
+					<section class="right tab-bar-section">
+						<h1 class="title">SOCIAL</h1>
+					</section>
+				</nav>
+				<aside class="left-off-canvas-menu">
+					<ul class="off-canvas-list">
+						<!-- <li><label>LittleKnife</label></li>
+						<li><label>JUST DO IT</label></li> -->
+						<li><a href="#">朋友圈</a></li>
+						<li><a href="#/chat">聊天</a></li>
+						<li><a href="#/love">我爱</a></li>
+
+						<li><a href="#/game">游戏</a></li>
+						<li><a href="#/app">应用</a></li>
+						<li><a href="#/notebook">日记</a></li>
+					</ul>
+				</aside>
+				<section class="main-section content-main">
+					<div class="container">
+						<div class="large-1 columns sidebar">
+							<ul class="side-nav wall">
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+							</ul>
+						</div>
+						<div class="large-11 columns content">
+							<div ng-view></div>
+						</div>
+					</div>
+				</section>
+				<a class="exit-off-canvas"></a>
+			</div>
+		</div>
+	</div>
+	<script src="/static/js-foundation/jquery.js"></script>
+	<script src="/static/js/bootstrap.js"></script>
+	<script src="/static/js-foundation/foundation/foundation.alert.js"></script>
+    <script src="/static/js-foundation/foundation.min.js"></script>
+    <script src="/static/js-foundation/foundation/foundation.offcanvas.js"></script>
+    <script src="/static/js-foundation/angular.js"></script>
+    <script src="/static/js-foundation/social.js"></script>
+</body>
+</html>
