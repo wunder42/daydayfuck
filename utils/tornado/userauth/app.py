@@ -3,7 +3,7 @@ import os, sys, logging
 from tornado.web import RequestHandler, Application
 from tornado.ioloop import IOLoop
 from tornado.options import define, parse_command_line, options
-from handlers.handler import Login, Register, Logout, Home, EchoHandler
+from handlers.handler import Login, Register, Logout, Home, EchoHandler, NewHome
 
 
 class IApplication(Application):
@@ -16,7 +16,8 @@ class IApplication(Application):
 			(r'/logout', Logout),
 			(r'/register', Register),
 
-			(r'/message', EchoHandler)
+			(r'/message', EchoHandler),
+			(r'/home', NewHome)
 		]
 
 		settings = {

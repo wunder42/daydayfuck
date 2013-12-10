@@ -6,8 +6,7 @@
     <title>littleknife's zoon</title>
     <link rel="stylesheet" href="/static/css-foundation/foundation.css" />
     <link rel="stylesheet/less" href="/static/css-foundation/style.less" />
-    <script src="/static/js-foundation/modernizr.js"></script>
-    <script src="/static/js-foundation/less-1.5.0.min.js"></script>
+    
 </head>
 <body>
 	<div class="row main">
@@ -15,8 +14,22 @@
 		<span class="label online-num">{{onlineNum}}</span>
 		<button id="send">Click</button>
 		<span class="sysinfo"></span>
+        <hr>
+        <label>friends zoom :</label>
+        <input type="text" class="cc"></input>
+        <button class="tiny info tozoom">send</button>
+        
+        <div data-alert class="alert-box warning" style="clear: both; display: none">
+            <a href="#" class="close haha">&times;</a>
+        </div>
+        <div class="msghub">
+
+        </div>
 	</div>
+    <script src="/static/js-foundation/modernizr.js"></script>
+    <script src="/static/js-foundation/less-1.5.0.min.js"></script>
 	<script src="/static/js-foundation/jquery.js"></script>
+    <script src="/static/js-foundation/jquery.cookie.js"></script>
     <script src="/static/js-foundation/foundation.min.js"></script>
     <script src="/static/js-foundation/angular.js"></script>
     <script src="/static/message.js"></script>

@@ -25,6 +25,11 @@ class Home(BaseHandler):
 		# self.write(json.dumps({'login':True, 'username':self.get_current_user(), 'onlineNum': self.onlineNum()}))
 		self.render('userauth.html', username=self.get_current_user(), onlineNum=self.onlineNum())
 
+class NewHome(BaseHandler):
+
+	def get(self):
+		self.render('new-index.html')
+
 class Login(BaseHandler):
 
 	def get(self):
@@ -91,7 +96,7 @@ class EchoHandler(tornado.websocket.WebSocketHandler):
 		logging.info('got message %r', message)
 		message = json.loads(message)
 		# self.write_message(json.dumps({'type':'1', 'addNum':1}))
-		EchoHandler.sendUpdate({'type':2, 'msg':'daydayfuck'})
+		EchoHandler.sendUpdate({'type':3, 'content':message['content'], 'from':manager.getSession(self.get_secure_cookie('userid')).userName})
 
 	def on_close(self):
 		logging.info('remove ...')
