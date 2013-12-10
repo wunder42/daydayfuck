@@ -21,3 +21,5 @@ ProfileCtrl = ($scope) ->
 
 $ ->
 	console.log 'start'
+
+	$(".content").css {height:$(document).height()}
