@@ -49,6 +49,7 @@ function startDrag(obj){
     itemCopy.style.left     = obj.getAttribute("startLeft");
     itemCopy.style.top      = obj.getAttribute("startTop");
     itemCopy.style.display  = "block";
+    console.log(itemCopy.style.left, itemCopy.style.top)
 }
 
 /*
