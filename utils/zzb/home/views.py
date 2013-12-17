@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic.base import View
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, FormView
+
+from .forms import GititemForm
 
 
 def index(request):
@@ -24,6 +26,13 @@ class GitItem(DetailView):
     	context = super(GitItem, self).get_context_data(**kwargs)
     	context['text'] = 'kiss me'
     	return context
+
+class GititemUpload(FormView):
+    template_name = 'gititemupload.html'
+    form_class = GititemForm
+
+    def form_valid(self, form):
+        return super(GititemUpload, self).form_valid(form)
 
 
 class T(View):
