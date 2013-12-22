@@ -18,6 +18,10 @@ class BaseHandler(RequestHandler):
 	def onlineNum(self):
 		return manager.onlineNum()
 
+	@preoperty
+	def db(self):
+		return self.application.db
+
 class Home(BaseHandler):
 
 	@authenticated
@@ -112,3 +116,12 @@ class EchoHandler(tornado.websocket.WebSocketHandler):
 			except:
 				logging.error('Error sending msg')
 
+class ChatHandler(BaseHandler):
+
+	@authenticated
+	def post(self):
+		_fromid = self.get_argument('from', None)
+		_toid = self.get_argument('to', None)
+
+
+		self.write(json.dumps({'result':True}))

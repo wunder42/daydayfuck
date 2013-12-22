@@ -4,34 +4,77 @@
 	<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>littleknife's zoon</title>
-    <link rel="stylesheet" href="/static/css-foundation/foundation.css" />
-    <link rel="stylesheet/less" href="/static/css-foundation/style.less" />
-    
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="/static/css/ichat.css" />
 </head>
 <body>
-	<div class="row main">
-		<span class="label username">{{username}}</span>
-		<span class="label online-num">{{onlineNum}}</span>
-		<button id="send">Click</button>
-		<span class="sysinfo"></span>
-        <hr>
-        <label>friends zoom :</label>
-        <input type="text" class="cc"></input>
-        <button class="tiny info tozoom">send</button>
-        
-        <div data-alert class="alert-box warning" style="clear: both; display: none">
-            <a href="#" class="close haha">&times;</a>
-        </div>
-        <div class="msghub">
+    <header>
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">{{username}}</a>
+              </div>
+        </nav>
+    </header>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-md-offset-2 ifriends">
+                <div>
+                    <h5 class="idivider ih5" id="chat">{{username}}</h5>
+                </div>
+                <div class="ifriends-index">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li><a href="#">admin<span class="badge">42</span></a></li>
+                      <li><a href="#">usera</a></li>
+                      <li><a href="#">userb</a></li>
+                      <li><a href="#">usera</a></li>
+                      <li><a href="#">userb</a></li>
+                      <li><a href="#">usera</a></li>
+                      <li><a href="#">userb</a></li>
+                      <li><a href="#">usera</a></li>
+                      <li><a href="#">userb</a></li>
+                      <li><a href="#">usera</a></li>
+                      <li><a href="#">userb</a></li>
+                      <li><a href="#">usera</a></li>
+                      <li><a href="#">userb</a></li>
+                      <li><a href="#">usera</a></li>
+                      <li><a href="#">userb</a></li>
+                      <li><a href="#">usera</a></li>
+                      <li><a href="#">userb</a></li>
+                      <li><a href="#">usera</a></li>
+                      <li><a href="#">userb</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 imessage">
+                <div class="msg-content">
+                    <h5 class="idivider ih5" id="chat-with"> user</h5>
+                    <div class="msg-content-display">
+                        <ul class="msg-content-ul">
+                          <li class="pull-right">bbbb</li>
+                          <li>aaaa</li>
+                          
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="msg-send">
+                    <input type="text" class="msg-send-content" style="min-width:500px;" />
+                    <button class="msg-send-btn">send</button>
+                </div>
+            </div>
         </div>
-	</div>
-    <script src="/static/js-foundation/modernizr.js"></script>
-    <script src="/static/js-foundation/less-1.5.0.min.js"></script>
-	<script src="/static/js-foundation/jquery.js"></script>
-    <script src="/static/js-foundation/jquery.cookie.js"></script>
-    <script src="/static/js-foundation/foundation.min.js"></script>
-    <script src="/static/js-foundation/angular.js"></script>
+    </div>
+    <script src="/static/jquery-1.8.3.min.js"></script>
+	<script src="/static/js/bootstrap.min.js"></script>
     <script src="/static/message.js"></script>
 </body>
 </html>

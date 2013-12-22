@@ -3,7 +3,9 @@ import os, sys, logging
 from tornado.web import RequestHandler, Application
 from tornado.ioloop import IOLoop
 from tornado.options import define, parse_command_line, options
-from handlers.handler import Login, Register, Logout, Home, EchoHandler, NewHome
+from handlers.handler import Login, Register, Logout, Home, EchoHandler, NewHome, ChatHandler
+
+import settings
 
 
 class IApplication(Application):
@@ -17,7 +19,8 @@ class IApplication(Application):
 			(r'/register', Register),
 
 			(r'/message', EchoHandler),
-			(r'/home', NewHome)
+			(r'/home', NewHome),
+			(r'/chat/c', ChatHandler),
 		]
 
 		settings = {
@@ -28,8 +31,9 @@ class IApplication(Application):
 			'static_path': os.path.join(os.path.dirname(__file__), 'static'),
 			'debug': True
 		}
-
+		
 		super(IApplication, self).__init__(handlers, **settings)
+		self.db = pymongo.Connection(settings.DB_HOST, settings.DB_PORT)[settings.DB_NAME]
 
 define('port', default=8989, type=int)
 

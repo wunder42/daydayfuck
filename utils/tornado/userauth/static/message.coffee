@@ -27,6 +27,10 @@ updater = {
 
 }
 
+getcookie = (name) ->
+	r = document.cookie.match("\\b" + name + "=([^;]*)\\b")
+	if r then r[1] else null
+
 # class update
 # 	socket: null
 # 	start: ->
@@ -58,4 +62,24 @@ $ ->
 		# 	console.log textStatus, data
 		# console.log {content:_t, userid:$.cookie("userid")}
 		updater.socket.send JSON.stringify {content:_t, 'userid':$.cookie("userid")}
+
+	$(".msg-send-btn").click (e) ->
+		console.log 'msg-send-btn'
+
+		_flag = $(".msg-send-content")
+		_content = _flag.val()
+		_from = $('#chat').text()
+		_to = $("#chat-with").text()
+		args = {'_xsrf': getcookie('_xsrf'),'from':_from, 'to':_to, 'content':_content}
+
+		console.log args
+
+		$.post '/chat/c', args, (data, textStatus, xhr) ->
+			console.log data, textStatus
+			_data = $.parseJSON data
+			if not _data['result']
+				return
+			_ihtml = $("<li>#{_content}</li>")
+			$(".msg-content-ul").append _ihtml
+
 
