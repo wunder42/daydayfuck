@@ -1,0 +1,147 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}zzbooooo{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap-theme.min.css' %}" rel="stylesheet">
+    <!-- <link href="{% static 'django_markdown/markdown.css' %}" rel="stylesheet">
+    <link href="{% static 'django_markdown/preview.css' %}" rel="stylesheet">
+    <link href="{% static 'django_markdown/skins/simple/style.css' %}" rel="stylesheet">
+ -->
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- This file store project specific CSS -->
+    <link href="{% static 'css/style-zzb.css' %}" rel="stylesheet">
+
+    <!-- Use this to quickly test CSS changes in a template,
+        then move to project.css -->
+    {% block extra_css %}{% endblock extra_css %}
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+  </head>
+
+  <body>
+
+    <header>
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">至尊宝</a>
+              </div>
+        </nav>
+    </header>
+
+    <div class="container">
+
+      {% block content %}
+        <div class="row">
+            <div class="col-md-6 col-md-offset-2 col-xs-12">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">热门标签</div>
+                    <div class="panel-body">
+                        <a class="label label-info" href="#">Django<span class="badge">x42</span></a>
+                        <a class="label label-info" href="#">Django<span class="badge">x42</span></a>
+                        <a class="label label-info" href="#">Django<span class="badge">x42</span></a>
+                        <a class="label label-info" href="#">Django<span class="badge">x42</span></a>
+                        <a class="label label-info" href="#">Django<span class="badge">x42</span></a>
+                        <a class="label label-info" href="#">Django<span class="badge">x42</span></a>
+                        <a class="label label-info" href="#">Django<span class="badge">x42</span></a>
+                        <a class="label label-info" href="#">Django<span class="badge">x42</span></a>
+                        <a class="label label-info" href="#">Django<span class="badge">x42</span></a>
+                        <a class="label label-info" href="#">Django<span class="badge">x42</span></a>
+                        <a class="label label-info" href="#">Django<span class="badge">x42</span></a>
+                        <a class="label label-info" href="#">Django<span class="badge">x42</span></a>
+                        <a class="label label-info" href="#">Django<span class="badge">x42</span></a>
+
+                    </div>
+                </div>
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">热门项目</div>
+                    <div class="panel-body">
+                        <div class="list-group">
+                          <a href="#" class="list-group-item">
+                            Cras justo odio
+                          </a>
+                          <a href="/item/zzb-tornado" class="list-group-item">Tornado is a python web framework</a>
+                          <a href="#" class="list-group-item">Morbi leo risus</a>
+                          <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                          <a href="#" class="list-group-item">Vestibulum at eros</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">随便看看</div>
+                    <div class="panel-body">
+                        <div class='GithubEmbed'>
+                                <script type="text/javascript" src="http://www.oschina.net/js/jquery/jquery.githubRepoWidget.js"></script>
+                <div class="github-widget" data-repo="litecoin-project/litecoin" style="margin:10px 0;"></div>
+                <script type="text/javascript">
+            var genGitIdent = function(ident){
+                var id = [];
+                $.each(ident.split('/'),function(i,v){
+                    if(i<=2)
+                        id.push(v.replace('.git','').replace(':','/'));
+                });
+                return id.join('/')+"/preview";
+            };
+            var url = ["https://litecoin.org/","","https://litecoin.org/","https://github.com/litecoin-project/litecoin"];
+            var found = false;
+            for(var i in url){
+                var ident = url[+i].split('git.oschina.net');
+                if(ident.length==2 && !found){
+                    var prv = genGitIdent(ident[1]);
+                    if(prv && prv.length>0){
+                        document.getElementsByClassName("GithubEmbed")[0].innerHTML = "";
+                        document.write('<script src="http://git.oschina.net'+prv+'" type="text\/javascript"><\/script>');
+                        found = true;
+                    }
+                }else{
+                    continue;
+                }
+            }
+        </script>
+        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+
+            </div>
+        </div> 
+      {% endblock content %}
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    <!-- place project specific Javascript in this file -->
+    <script src="{% static 'js/project.js' %}"></script>
+
+
+    {% block extra_js %}{% endblock extra_js %}
+  </body>
+</html>

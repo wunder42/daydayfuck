@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %} {{title}} {% endblock title %}
+
+{% block content %}
+	<div class="row">
+            <div class="col-md-6 col-md-offset-2 col-xs-12">
+                <div class="page-header">
+                    <h3>Tornado Web Framework <small>nice and strong</small></h3>
+                </div>
+                <section>
+                    <p>
+                        Litecoin(中文译名：莱特币)是一种基于“点对点”(peer-to-peer)技术的网络货币，它可以帮助您即时付款给世界上任何一个人。它基于比特币(Bitcoin)协议，但不同于比特币的地方在于，通过消费级的硬件也可以高效地“挖矿”。Litecoin提供给您更快速的交易确认（平均2.5分钟），它使用硬内存以及基于scrypt(一种加密算法)的挖矿工作量证明算法，面向大多数人使用的普通计算机及图形处理器(GPU)。Litecoin网络预期将生产8400万个货币单位。
+                        </p>
+                        <p>
+                        Litecoin的设计目的之一是提供一种挖掘算法，使它能够在挖掘比特币的机器上被同时运行。为挖掘比特币而设计的专用集成电路(ASIC)逐渐兴起的同时，Litecoin也紧跟着技术演变。但在Litecoin货币被广泛应用之前，不太可能会出现专门为Litecoin设计的专用集成电路(ASIC)。
+                    </p>
+                </section>
+                <section>
+                    <div class='GithubEmbed'>
+                                <script type="text/javascript" src="http://www.oschina.net/js/jquery/jquery.githubRepoWidget.js"></script>
+                <div class="github-widget" data-repo="litecoin-project/litecoin" style="margin:10px 0;"></div>
+                <script type="text/javascript">
+            var genGitIdent = function(ident){
+                var id = [];
+                $.each(ident.split('/'),function(i,v){
+                    if(i<=2)
+                        id.push(v.replace('.git','').replace(':','/'));
+                });
+                return id.join('/')+"/preview";
+            };
+            var url = ["https://litecoin.org/","","https://litecoin.org/","https://github.com/litecoin-project/litecoin"];
+            var found = false;
+            for(var i in url){
+                var ident = url[+i].split('git.oschina.net');
+                if(ident.length==2 && !found){
+                    var prv = genGitIdent(ident[1]);
+                    if(prv && prv.length>0){
+                        document.getElementsByClassName("GithubEmbed")[0].innerHTML = "";
+                        document.write('<script src="http://git.oschina.net'+prv+'" type="text\/javascript"><\/script>');
+                        found = true;
+                    }
+                }else{
+                    continue;
+                }
+            }
+        </script>
+        </div>
+                </section>
+            </div>
+            <div class="col-md-4">
+
+            </div>
+        </div> 
+{% endblock content %}
