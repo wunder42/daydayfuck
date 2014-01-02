@@ -10,6 +10,7 @@ flatpages.register()
 urlpatterns = patterns('',
     # Examples:
     url(r'', include('home.urls')),
+    url(r'^demo/', include('demo.urls')),
     url(r'^markdown/', include('django_markdown.urls')),
 
     url(r'^static/(?P<path>.*)$', 'django.views.static.serve',\

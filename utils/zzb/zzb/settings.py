@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'home',
     'south',
     'django_markdown',
+    'pagedown',
 )
 
 MIDDLEWARE_CLASSES = (
