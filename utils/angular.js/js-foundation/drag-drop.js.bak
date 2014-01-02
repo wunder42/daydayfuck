@@ -49,7 +49,7 @@ function startDrag(obj){
     itemCopy.style.left     = obj.getAttribute("startLeft");
     itemCopy.style.top      = obj.getAttribute("startTop");
     itemCopy.style.display  = "block";
-    console.log(itemCopy.style.left, itemCopy.style.top)
+    console.log(itemCopy.style.left, itemCopy.style.top, itemCopy.innerHTML)
 }
 
 /*
@@ -165,8 +165,9 @@ function mouseDown(ev){
     
     if(target.className == "dragItem"){
         curItem = target;
-        mouseOffset = MouseOffsetElement(curItem,ev);
+        mouseOffset = MouseOffsetElement(curItem, ev);
         startDrag(curItem);
+        console.log(curItem)
     }
     isMouseDown = true;
     if (target.className=="dragItem") {
@@ -197,6 +198,7 @@ window.onload = function(){
  * 鼠标相对元素（左上角）的位置
  */
 function MouseOffsetElement(obj,ev){
+    console.log(ev.pageX - obj.offsetLeft)
     return {
         offsetLeft : ev.pageX - obj.offsetLeft,
         offsetTop : ev.pageY - obj.offsetTop

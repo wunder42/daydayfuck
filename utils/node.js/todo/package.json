@@ -6,10 +6,11 @@
 		"start": "node app"
 	},
 	"dependencies": {
-		"node.js": "0.10.22",
+		"node.js": "*",
 		"express": "*",
-		"jade": "*",
+		"ejs": "*",
 		"socket.io": "*",
+		"log4js": "*",
 		"coffee-script": "*",
 		"connect-assets": "*",
 		"undefined": "*"
