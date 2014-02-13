@@ -11,8 +11,13 @@
 		"ejs": "*",
 		"socket.io": "*",
 		"log4js": "*",
+		"mongoose": "*",
+		"mongodb":"*",
+		"connect-mongo":"*",
+		"connect-flash":"*",
 		"coffee-script": "*",
 		"connect-assets": "*",
+		"requirejs": "*",
 		"undefined": "*"
 	}
 }

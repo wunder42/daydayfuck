@@ -18,7 +18,7 @@ class BaseHandler(RequestHandler):
 	def onlineNum(self):
 		return manager.onlineNum()
 
-	@preoperty
+	@property
 	def db(self):
 		return self.application.db
 
@@ -27,7 +27,7 @@ class Home(BaseHandler):
 	@authenticated
 	def get(self):
 		# self.write(json.dumps({'login':True, 'username':self.get_current_user(), 'onlineNum': self.onlineNum()}))
-		self.render('userauth.html', username=self.get_current_user(), onlineNum=self.onlineNum())
+		self.render('gtd.html', username=self.get_current_user(), onlineNum=self.onlineNum())
 
 class NewHome(BaseHandler):
 

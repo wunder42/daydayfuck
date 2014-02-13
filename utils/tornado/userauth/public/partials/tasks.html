@@ -1,0 +1,43 @@
+
+<div id="dragContainer" app-version>
+    <div class="dragManager" id="manager-0">
+        <div class="item-head label-info"><strong>未完成</strong></div>
+        <!-- <div class="dragItem">dragItem1</div>
+        <div class="dragItem">dragItem2</div>
+        <div class="dragItem">dragItem3</div>
+        <div class="dragItem">dragItem4</div> -->
+        <div class="addCartBox" ng-show="cartBoxState.show[0]">
+            <input type="text" style="width: 100%" ng-model="carBoxContent[0]"><br/>
+            <button class="addCartAccept" style="width:60px;" ng-click="addCartAccept($event)" data-id="0"> Add </button>
+            <button class="addCartCancel" style="width:60px;" ng-click="addCartCancel($event)" data-id="0"> Cancel </button>
+        </div>
+        <button class="addCart btn btn-default" type="button" ng-click="addCart($event)" ng-hide="cartBoxState.show[0]" data-id="0">{{te}}新建任务</button>
+    </div>
+    <div class="dragManager" id="manager-1">
+        <div class="item-head label-info"><strong>进行中</strong></div>
+        <!-- <div class="dragItem">dragItem5</div>
+        <div class="dragItem">dragItem6</div>
+        <div class="dragItem">dragItem7</div>
+        <div class="dragItem">dragItem8</div> -->
+        <div class="addCartBox" ng-show="cartBoxState.show[1]">
+            <input type="text" style="width: 100%" ng-model="carBoxContent[1]"><br/>
+            <button class="addCartAccept" style="width:60px;" ng-click="addCartAccept($event)" data-id="1"> Add </button>
+            <button class="addCartCancel" style="width:60px;" ng-click="addCartCancel($event)" data-id="1"> Cancel </button>
+        </div>
+        <button class="addCart btn btn-default" type="button" ng-click="addCart($event)" ng-hide="cartBoxState.show[1]" data-id="1">{{te}}新建任务</button>
+    </div>
+    <div class="dragManager" id="manager-2">
+        <div class="item-head label-info"><strong>已完成</strong></div>
+        <!-- <div class="dragItem">dragItem9</div>
+        <div class="dragItem">dragItem10</div>
+        <div class="dragItem">dragItem11</div>
+        <div class="dragItem">dragItem12</div> -->
+        <div class="addCartBox" ng-show="cartBoxState.show[2]">
+            <input type="text" style="width: 100%" ng-model="carBoxContent[2]"><br/>
+            <button class="addCartAccept" style="width:60px;" ng-click="addCartAccept($event)" data-id="2"> Add </button>
+            <button class="addCartCancel" style="width:60px;" ng-click="addCartCancel($event)" data-id="2"> Cancel </button>
+        </div>
+        <button class="addCart btn btn-default" type="button" ng-click="addCart($event)" ng-hide="cartBoxState.show[2]" data-id="2">{{te}}新建任务</button>
+    </div>
+    
+</div>

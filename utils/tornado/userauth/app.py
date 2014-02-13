@@ -1,4 +1,4 @@
-import os, sys, logging
+import os, sys, logging, pymongo
 
 from tornado.web import RequestHandler, Application
 from tornado.ioloop import IOLoop
@@ -28,7 +28,7 @@ class IApplication(Application):
 			'xsrc_cookies': True,
 			'login_url': '/login', 
 			'template_path': os.path.join(os.path.dirname(__file__), 'templates'),
-			'static_path': os.path.join(os.path.dirname(__file__), 'static'),
+			'static_path': os.path.join(os.path.dirname(__file__), 'public'),
 			'debug': True
 		}
 		

@@ -1,4 +1,4 @@
-import pymongo, logging
+import logging
 
 ### database config ###
 DB_NAME = 'userauth'

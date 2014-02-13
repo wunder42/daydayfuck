@@ -2,7 +2,7 @@
 import pymongo, json, logging, time, uuid
 from uuid import uuid5
 
-# import settings
+import settings
 
 class Session(object):
 
@@ -70,7 +70,7 @@ class SessionManager(object):
 
 
 
-# manager = SessionManager.instance()
+manager = SessionManager.instance()
 
 if __name__ == '__main__':
 	sess = Session('knife@163.com')
